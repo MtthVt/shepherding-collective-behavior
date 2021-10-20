@@ -1,0 +1,1620 @@
+fileFormatVersion: 2
+guid: b0c8216ca325921428e68838885b2fd3
+timeCreated: 1486311614
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BackLegControl.L
+    100002: BackLegControl.R
+    100004: Beagle
+    100006: BeagleBody
+    100008: BeagleLeftEye
+    100010: BeagleLeftPupil
+    100012: //RootNode
+    100014: BeagleRightEye
+    100016: BeagleRightPupil
+    100018: BodyBone
+    100020: EarEnd.L
+    100022: EarEnd.L_end
+    100024: EarEnd.R
+    100026: EarEnd.R_end
+    100028: EarMiddleBone.L
+    100030: EarMiddleBone.R
+    100032: EarStartBone.L
+    100034: EarStartBone.R
+    100036: EyeBulbBone.L
+    100038: EyeBulbBone.R
+    100040: EyePupilBone.L
+    100042: EyePupilBone.L_end
+    100044: EyePupilBone.R
+    100046: EyePupilBone.R_end
+    100048: FrontLegControl.L
+    100050: FrontLegControl.R
+    100052: FrontLegEndBone.L
+    100054: FrontLegEndBone.L_end
+    100056: FrontLegEndBone.R
+    100058: FrontLegEndBone.R_end
+    100060: FrontLegFootBone.L
+    100062: FrontLegFootBone.L_end
+    100064: FrontLegFootBone.R
+    100066: FrontLegFootBone.R_end
+    100068: FrontLegMiddleBone.L
+    100070: FrontLegMiddleBone.R
+    100072: FrontLegMovementBone.L
+    100074: FrontLegMovementBone.L_end
+    100076: FrontLegMovementBone.R
+    100078: FrontLegMovementBone.R_end
+    100080: FrontLegPoleTarget.L
+    100082: FrontLegPoleTarget.L_end
+    100084: FrontLegPoleTarget.R
+    100086: FrontLegPoleTarget.R_end
+    100088: FrontLegStartBone.L
+    100090: FrontLegStartBone.R
+    100092: HeadBone
+    100094: MouthBone
+    100096: MouthBone_end
+    100098: NeckBone
+    100100: NoseBone
+    100102: NoseBone_end
+    100104: RearBone
+    100106: RearFootBone.L
+    100108: RearFootBone.L_end
+    100110: RearFootBone.R
+    100112: RearFootBone.R_end
+    100114: RearLegEndMiddle.L
+    100116: RearLegEndMiddle.L_end
+    100118: RearLegEndMiddle.R
+    100120: RearLegEndMiddle.R_end
+    100122: RearLegMiddleBone.L
+    100124: RearLegMiddleBone.R
+    100126: RearLegMovementBone.L
+    100128: RearLegMovementBone.L_end
+    100130: RearLegMovementBone.R
+    100132: RearLegMovementBone.R_end
+    100134: RearLegPoleTarget.L
+    100136: RearLegPoleTarget.L_end
+    100138: RearLegPoleTarget.R
+    100140: RearLegPoleTarget.R_end
+    100142: RearLegStartBone.L
+    100144: RearLegStartBone.R
+    100146: TailEndBone
+    100148: TailEndBone_end
+    100150: TailEndMiddleBone
+    100152: TailStartBone
+    100154: TailStartMiddleBone
+    100156: TorsoBone
+    100158: ToungeMiddleBone
+    100160: ToungeMiddleBone.001
+    100162: ToungeMiddleBone.001_end
+    100164: ToungeTopBone
+    400000: BackLegControl.L
+    400002: BackLegControl.R
+    400004: Beagle
+    400006: BeagleBody
+    400008: BeagleLeftEye
+    400010: BeagleLeftPupil
+    400012: //RootNode
+    400014: BeagleRightEye
+    400016: BeagleRightPupil
+    400018: BodyBone
+    400020: EarEnd.L
+    400022: EarEnd.L_end
+    400024: EarEnd.R
+    400026: EarEnd.R_end
+    400028: EarMiddleBone.L
+    400030: EarMiddleBone.R
+    400032: EarStartBone.L
+    400034: EarStartBone.R
+    400036: EyeBulbBone.L
+    400038: EyeBulbBone.R
+    400040: EyePupilBone.L
+    400042: EyePupilBone.L_end
+    400044: EyePupilBone.R
+    400046: EyePupilBone.R_end
+    400048: FrontLegControl.L
+    400050: FrontLegControl.R
+    400052: FrontLegEndBone.L
+    400054: FrontLegEndBone.L_end
+    400056: FrontLegEndBone.R
+    400058: FrontLegEndBone.R_end
+    400060: FrontLegFootBone.L
+    400062: FrontLegFootBone.L_end
+    400064: FrontLegFootBone.R
+    400066: FrontLegFootBone.R_end
+    400068: FrontLegMiddleBone.L
+    400070: FrontLegMiddleBone.R
+    400072: FrontLegMovementBone.L
+    400074: FrontLegMovementBone.L_end
+    400076: FrontLegMovementBone.R
+    400078: FrontLegMovementBone.R_end
+    400080: FrontLegPoleTarget.L
+    400082: FrontLegPoleTarget.L_end
+    400084: FrontLegPoleTarget.R
+    400086: FrontLegPoleTarget.R_end
+    400088: FrontLegStartBone.L
+    400090: FrontLegStartBone.R
+    400092: HeadBone
+    400094: MouthBone
+    400096: MouthBone_end
+    400098: NeckBone
+    400100: NoseBone
+    400102: NoseBone_end
+    400104: RearBone
+    400106: RearFootBone.L
+    400108: RearFootBone.L_end
+    400110: RearFootBone.R
+    400112: RearFootBone.R_end
+    400114: RearLegEndMiddle.L
+    400116: RearLegEndMiddle.L_end
+    400118: RearLegEndMiddle.R
+    400120: RearLegEndMiddle.R_end
+    400122: RearLegMiddleBone.L
+    400124: RearLegMiddleBone.R
+    400126: RearLegMovementBone.L
+    400128: RearLegMovementBone.L_end
+    400130: RearLegMovementBone.R
+    400132: RearLegMovementBone.R_end
+    400134: RearLegPoleTarget.L
+    400136: RearLegPoleTarget.L_end
+    400138: RearLegPoleTarget.R
+    400140: RearLegPoleTarget.R_end
+    400142: RearLegStartBone.L
+    400144: RearLegStartBone.R
+    400146: TailEndBone
+    400148: TailEndBone_end
+    400150: TailEndMiddleBone
+    400152: TailStartBone
+    400154: TailStartMiddleBone
+    400156: TorsoBone
+    400158: ToungeMiddleBone
+    400160: ToungeMiddleBone.001
+    400162: ToungeMiddleBone.001_end
+    400164: ToungeTopBone
+    4300000: BeagleBody
+    4300002: BeagleLeftEye
+    4300004: BeagleLeftPupil
+    4300006: BeagleRightEye
+    4300008: BeagleRightPupil
+    7400000: Beagle|deleteMe
+    7400002: Beagle|Dog_RunRealistic.001
+    7400004: Beagle|Dog_RunRealisticLookRight.001
+    7400006: Beagle|Idle
+    7400008: Beagle|IdleLookLeftAndRight
+    7400010: Beagle|RealisticRun
+    7400012: Beagle|RealisticRun_LookLeft
+    7400014: Beagle|RealisticRun_LookRight
+    7400016: Beagle|Run
+    7400018: Beagle|Walkback
+    9500000: //RootNode
+    13700000: BeagleBody
+    13700002: BeagleLeftEye
+    13700004: BeagleLeftPupil
+    13700006: BeagleRightEye
+    13700008: BeagleRightPupil
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Beagle|Idle
+      takeName: Beagle|Idle
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Beagle
+        weight: 1
+      - path: Beagle/BackLegControl.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BeagleBody
+        weight: 1
+      - path: BeagleLeftEye
+        weight: 1
+      - path: BeagleLeftPupil
+        weight: 1
+      - path: BeagleRightEye
+        weight: 1
+      - path: BeagleRightPupil
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Beagle|IdleLookLeftAndRight
+      takeName: Beagle|IdleLookLeftAndRight
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Beagle
+        weight: 1
+      - path: Beagle/BackLegControl.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BeagleBody
+        weight: 1
+      - path: BeagleLeftEye
+        weight: 1
+      - path: BeagleLeftPupil
+        weight: 1
+      - path: BeagleRightEye
+        weight: 1
+      - path: BeagleRightPupil
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Beagle|RealisticRun
+      takeName: Beagle|RealisticRun
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Beagle
+        weight: 1
+      - path: Beagle/BackLegControl.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BeagleBody
+        weight: 1
+      - path: BeagleLeftEye
+        weight: 1
+      - path: BeagleLeftPupil
+        weight: 1
+      - path: BeagleRightEye
+        weight: 1
+      - path: BeagleRightPupil
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Beagle|RealisticRun_LookLeft
+      takeName: Beagle|RealisticRun_LookLeft
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Beagle
+        weight: 1
+      - path: Beagle/BackLegControl.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BeagleBody
+        weight: 1
+      - path: BeagleLeftEye
+        weight: 1
+      - path: BeagleLeftPupil
+        weight: 1
+      - path: BeagleRightEye
+        weight: 1
+      - path: BeagleRightPupil
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Beagle|RealisticRun_LookRight
+      takeName: Beagle|RealisticRun_LookRight
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Beagle
+        weight: 1
+      - path: Beagle/BackLegControl.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BeagleBody
+        weight: 1
+      - path: BeagleLeftEye
+        weight: 1
+      - path: BeagleLeftPupil
+        weight: 1
+      - path: BeagleRightEye
+        weight: 1
+      - path: BeagleRightPupil
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Beagle|Run
+      takeName: Beagle|Run
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Beagle
+        weight: 1
+      - path: Beagle/BackLegControl.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BeagleBody
+        weight: 1
+      - path: BeagleLeftEye
+        weight: 1
+      - path: BeagleLeftPupil
+        weight: 1
+      - path: BeagleRightEye
+        weight: 1
+      - path: BeagleRightPupil
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Beagle|Walkback
+      takeName: Beagle|Walkback
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Beagle
+        weight: 1
+      - path: Beagle/BackLegControl.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Beagle/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/BackLegControl.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Beagle/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Beagle/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Beagle/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Beagle/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Beagle/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Beagle/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R
+        weight: 1
+      - path: Beagle/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R
+        weight: 1
+      - path: Beagle/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BeagleBody
+        weight: 1
+      - path: BeagleLeftEye
+        weight: 1
+      - path: BeagleLeftPupil
+        weight: 1
+      - path: BeagleRightEye
+        weight: 1
+      - path: BeagleRightPupil
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1631 @@
+fileFormatVersion: 2
+guid: d2ca6bcffe893f94998b93b9863ed8ca
+timeCreated: 1488494309
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BackLegControl.L
+    100002: BackLegControl.R
+    100004: BeagleLeftEye.002
+    100006: BeagleLeftPupil.002
+    100008: BeagleRightEye.002
+    100010: BeagleRightPupil.002
+    100012: BodyBone
+    100014: Boxer
+    100016: BoxerBody
+    100018: //RootNode
+    100020: EarEnd.L
+    100022: EarEnd.L_end
+    100024: EarEnd.R
+    100026: EarEnd.R_end
+    100028: EarMiddleBone.L
+    100030: EarMiddleBone.R
+    100032: EarStartBone.L
+    100034: EarStartBone.R
+    100036: EyeBulbBone.L
+    100038: EyeBulbBone.R
+    100040: EyePupilBone.L
+    100042: EyePupilBone.L_end
+    100044: EyePupilBone.R
+    100046: EyePupilBone.R_end
+    100048: FrontLegControl.L
+    100050: FrontLegControl.R
+    100052: FrontLegEndBone.L
+    100054: FrontLegEndBone.L_end
+    100056: FrontLegEndBone.R
+    100058: FrontLegEndBone.R_end
+    100060: FrontLegFootBone.L
+    100062: FrontLegFootBone.L_end
+    100064: FrontLegFootBone.R
+    100066: FrontLegFootBone.R_end
+    100068: FrontLegMiddleBone.L
+    100070: FrontLegMiddleBone.R
+    100072: FrontLegMovementBone.L
+    100074: FrontLegMovementBone.L_end
+    100076: FrontLegMovementBone.R
+    100078: FrontLegMovementBone.R_end
+    100080: FrontLegPoleTarget.L
+    100082: FrontLegPoleTarget.L_end
+    100084: FrontLegPoleTarget.R
+    100086: FrontLegPoleTarget.R_end
+    100088: FrontLegStartBone.L
+    100090: FrontLegStartBone.R
+    100092: HeadBone
+    100094: MouthBone
+    100096: MouthBone_end
+    100098: NeckBone
+    100100: NoseBone
+    100102: NoseBone_end
+    100104: RearBone
+    100106: RearFootBone.L
+    100108: RearFootBone.L_end
+    100110: RearFootBone.R
+    100112: RearFootBone.R_end
+    100114: RearLegEndMiddle.L
+    100116: RearLegEndMiddle.L_end
+    100118: RearLegEndMiddle.R
+    100120: RearLegEndMiddle.R_end
+    100122: RearLegMiddleBone.L
+    100124: RearLegMiddleBone.R
+    100126: RearLegMovementBone.L
+    100128: RearLegMovementBone.L_end
+    100130: RearLegMovementBone.R
+    100132: RearLegMovementBone.R_end
+    100134: RearLegPoleTarget.L
+    100136: RearLegPoleTarget.L_end
+    100138: RearLegPoleTarget.R
+    100140: RearLegPoleTarget.R_end
+    100142: RearLegStartBone.L
+    100144: RearLegStartBone.R
+    100146: TailEndBone
+    100148: TailEndBone_end
+    100150: TailEndMiddleBone
+    100152: TailStartBone
+    100154: TailStartMiddleBone
+    100156: TorsoBone
+    100158: ToungeMiddleBone
+    100160: ToungeMiddleBone.001
+    100162: ToungeMiddleBone.001_end
+    100164: ToungeTopBone
+    400000: BackLegControl.L
+    400002: BackLegControl.R
+    400004: BeagleLeftEye.002
+    400006: BeagleLeftPupil.002
+    400008: BeagleRightEye.002
+    400010: BeagleRightPupil.002
+    400012: BodyBone
+    400014: Boxer
+    400016: BoxerBody
+    400018: //RootNode
+    400020: EarEnd.L
+    400022: EarEnd.L_end
+    400024: EarEnd.R
+    400026: EarEnd.R_end
+    400028: EarMiddleBone.L
+    400030: EarMiddleBone.R
+    400032: EarStartBone.L
+    400034: EarStartBone.R
+    400036: EyeBulbBone.L
+    400038: EyeBulbBone.R
+    400040: EyePupilBone.L
+    400042: EyePupilBone.L_end
+    400044: EyePupilBone.R
+    400046: EyePupilBone.R_end
+    400048: FrontLegControl.L
+    400050: FrontLegControl.R
+    400052: FrontLegEndBone.L
+    400054: FrontLegEndBone.L_end
+    400056: FrontLegEndBone.R
+    400058: FrontLegEndBone.R_end
+    400060: FrontLegFootBone.L
+    400062: FrontLegFootBone.L_end
+    400064: FrontLegFootBone.R
+    400066: FrontLegFootBone.R_end
+    400068: FrontLegMiddleBone.L
+    400070: FrontLegMiddleBone.R
+    400072: FrontLegMovementBone.L
+    400074: FrontLegMovementBone.L_end
+    400076: FrontLegMovementBone.R
+    400078: FrontLegMovementBone.R_end
+    400080: FrontLegPoleTarget.L
+    400082: FrontLegPoleTarget.L_end
+    400084: FrontLegPoleTarget.R
+    400086: FrontLegPoleTarget.R_end
+    400088: FrontLegStartBone.L
+    400090: FrontLegStartBone.R
+    400092: HeadBone
+    400094: MouthBone
+    400096: MouthBone_end
+    400098: NeckBone
+    400100: NoseBone
+    400102: NoseBone_end
+    400104: RearBone
+    400106: RearFootBone.L
+    400108: RearFootBone.L_end
+    400110: RearFootBone.R
+    400112: RearFootBone.R_end
+    400114: RearLegEndMiddle.L
+    400116: RearLegEndMiddle.L_end
+    400118: RearLegEndMiddle.R
+    400120: RearLegEndMiddle.R_end
+    400122: RearLegMiddleBone.L
+    400124: RearLegMiddleBone.R
+    400126: RearLegMovementBone.L
+    400128: RearLegMovementBone.L_end
+    400130: RearLegMovementBone.R
+    400132: RearLegMovementBone.R_end
+    400134: RearLegPoleTarget.L
+    400136: RearLegPoleTarget.L_end
+    400138: RearLegPoleTarget.R
+    400140: RearLegPoleTarget.R_end
+    400142: RearLegStartBone.L
+    400144: RearLegStartBone.R
+    400146: TailEndBone
+    400148: TailEndBone_end
+    400150: TailEndMiddleBone
+    400152: TailStartBone
+    400154: TailStartMiddleBone
+    400156: TorsoBone
+    400158: ToungeMiddleBone
+    400160: ToungeMiddleBone.001
+    400162: ToungeMiddleBone.001_end
+    400164: ToungeTopBone
+    4300000: BeagleRightPupil.002
+    4300002: BeagleRightEye.002
+    4300004: BeagleLeftPupil.002
+    4300006: BeagleLeftEye.002
+    4300008: BoxerBody
+    7400000: Boxer|deleteMe
+    7400002: Boxer|deleteMe.001
+    7400004: Boxer|Dog_RunRealistic.001
+    7400006: Boxer|Dog_RunRealisticLookRight.000
+    7400008: Boxer|Dog_RunRealisticLookRight.001
+    7400010: Boxer|Idle
+    7400012: Boxer|IdleLookLeftAndRight
+    7400014: Boxer|IdleLookLeftAndRight.001
+    7400016: Boxer|IdleLookLeftAndRight.002
+    7400018: Boxer|RealisticRun
+    7400020: Boxer|RealisticRun.001
+    7400022: Boxer|RealisticRun_LookLeft
+    7400024: Boxer|RealisticRun_LookLeft.001
+    7400026: Boxer|RealisticRun_LookRight
+    7400028: Boxer|RealisticRun_LookRight.001
+    7400030: Boxer|Run
+    7400032: Boxer|Run.001
+    7400034: Boxer|Walkback
+    7400036: Boxer|Walkback.001
+    7400038: Boxer|Walkback.002
+    7400040: Boxer|Walkback.003
+    9500000: //RootNode
+    13700000: BeagleLeftEye.002
+    13700002: BeagleLeftPupil.002
+    13700004: BeagleRightEye.002
+    13700006: BeagleRightPupil.002
+    13700008: BoxerBody
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Boxer|Idle
+      takeName: Boxer|Idle
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.002
+        weight: 1
+      - path: BeagleLeftPupil.002
+        weight: 1
+      - path: BeagleRightEye.002
+        weight: 1
+      - path: BeagleRightPupil.002
+        weight: 1
+      - path: Boxer
+        weight: 1
+      - path: Boxer/BackLegControl.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BoxerBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Boxer|IdleLookLeftAndRight
+      takeName: Boxer|IdleLookLeftAndRight
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.002
+        weight: 1
+      - path: BeagleLeftPupil.002
+        weight: 1
+      - path: BeagleRightEye.002
+        weight: 1
+      - path: BeagleRightPupil.002
+        weight: 1
+      - path: Boxer
+        weight: 1
+      - path: Boxer/BackLegControl.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BoxerBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Boxer|RealisticRun
+      takeName: Boxer|RealisticRun
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.002
+        weight: 1
+      - path: BeagleLeftPupil.002
+        weight: 1
+      - path: BeagleRightEye.002
+        weight: 1
+      - path: BeagleRightPupil.002
+        weight: 1
+      - path: Boxer
+        weight: 1
+      - path: Boxer/BackLegControl.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BoxerBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Boxer|RealisticRun_LookLeft
+      takeName: Boxer|RealisticRun_LookLeft
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.002
+        weight: 1
+      - path: BeagleLeftPupil.002
+        weight: 1
+      - path: BeagleRightEye.002
+        weight: 1
+      - path: BeagleRightPupil.002
+        weight: 1
+      - path: Boxer
+        weight: 1
+      - path: Boxer/BackLegControl.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BoxerBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Boxer|RealisticRun_LookRight
+      takeName: Boxer|RealisticRun_LookRight
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.002
+        weight: 1
+      - path: BeagleLeftPupil.002
+        weight: 1
+      - path: BeagleRightEye.002
+        weight: 1
+      - path: BeagleRightPupil.002
+        weight: 1
+      - path: Boxer
+        weight: 1
+      - path: Boxer/BackLegControl.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BoxerBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Boxer|Run
+      takeName: Boxer|Run
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.002
+        weight: 1
+      - path: BeagleLeftPupil.002
+        weight: 1
+      - path: BeagleRightEye.002
+        weight: 1
+      - path: BeagleRightPupil.002
+        weight: 1
+      - path: Boxer
+        weight: 1
+      - path: Boxer/BackLegControl.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BoxerBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Boxer|Walkback
+      takeName: Boxer|Walkback
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.002
+        weight: 1
+      - path: BeagleLeftPupil.002
+        weight: 1
+      - path: BeagleRightEye.002
+        weight: 1
+      - path: BeagleRightPupil.002
+        weight: 1
+      - path: Boxer
+        weight: 1
+      - path: Boxer/BackLegControl.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Boxer/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/BackLegControl.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Boxer/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Boxer/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Boxer/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Boxer/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Boxer/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Boxer/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R
+        weight: 1
+      - path: Boxer/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R
+        weight: 1
+      - path: Boxer/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: BoxerBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

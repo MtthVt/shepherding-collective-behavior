@@ -1,0 +1,1631 @@
+fileFormatVersion: 2
+guid: b742fdc70b28a1d45b010f186bc137d6
+timeCreated: 1488494305
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BackLegControl.L
+    100002: BackLegControl.R
+    100004: BeagleLeftEye.001
+    100006: BeagleLeftPupil.001
+    100008: BeagleRightEye.001
+    100010: BeagleRightPupil.001
+    100012: BodyBone
+    100014: EarEnd.L
+    100016: EarEnd.L_end
+    100018: EarEnd.R
+    100020: EarEnd.R_end
+    100022: EarMiddleBone.L
+    100024: EarMiddleBone.R
+    100026: EarStartBone.L
+    100028: EarStartBone.R
+    100030: EyeBulbBone.L
+    100032: EyeBulbBone.R
+    100034: EyePupilBone.L
+    100036: EyePupilBone.L_end
+    100038: EyePupilBone.R
+    100040: EyePupilBone.R_end
+    100042: FrontLegControl.L
+    100044: FrontLegControl.R
+    100046: FrontLegEndBone.L
+    100048: FrontLegEndBone.L_end
+    100050: FrontLegEndBone.R
+    100052: FrontLegEndBone.R_end
+    100054: FrontLegFootBone.L
+    100056: FrontLegFootBone.L_end
+    100058: FrontLegFootBone.R
+    100060: FrontLegFootBone.R_end
+    100062: FrontLegMiddleBone.L
+    100064: FrontLegMiddleBone.R
+    100066: FrontLegMovementBone.L
+    100068: FrontLegMovementBone.L_end
+    100070: FrontLegMovementBone.R
+    100072: FrontLegMovementBone.R_end
+    100074: FrontLegPoleTarget.L
+    100076: FrontLegPoleTarget.L_end
+    100078: FrontLegPoleTarget.R
+    100080: FrontLegPoleTarget.R_end
+    100082: FrontLegStartBone.L
+    100084: FrontLegStartBone.R
+    100086: HeadBone
+    100088: Labrador
+    100090: LabradorBody
+    100092: //RootNode
+    100094: MouthBone
+    100096: MouthBone_end
+    100098: NeckBone
+    100100: NoseBone
+    100102: NoseBone_end
+    100104: RearBone
+    100106: RearFootBone.L
+    100108: RearFootBone.L_end
+    100110: RearFootBone.R
+    100112: RearFootBone.R_end
+    100114: RearLegEndMiddle.L
+    100116: RearLegEndMiddle.L_end
+    100118: RearLegEndMiddle.R
+    100120: RearLegEndMiddle.R_end
+    100122: RearLegMiddleBone.L
+    100124: RearLegMiddleBone.R
+    100126: RearLegMovementBone.L
+    100128: RearLegMovementBone.L_end
+    100130: RearLegMovementBone.R
+    100132: RearLegMovementBone.R_end
+    100134: RearLegPoleTarget.L
+    100136: RearLegPoleTarget.L_end
+    100138: RearLegPoleTarget.R
+    100140: RearLegPoleTarget.R_end
+    100142: RearLegStartBone.L
+    100144: RearLegStartBone.R
+    100146: TailEndBone
+    100148: TailEndBone_end
+    100150: TailEndMiddleBone
+    100152: TailStartBone
+    100154: TailStartMiddleBone
+    100156: TorsoBone
+    100158: ToungeMiddleBone
+    100160: ToungeMiddleBone.001
+    100162: ToungeMiddleBone.001_end
+    100164: ToungeTopBone
+    400000: BackLegControl.L
+    400002: BackLegControl.R
+    400004: BeagleLeftEye.001
+    400006: BeagleLeftPupil.001
+    400008: BeagleRightEye.001
+    400010: BeagleRightPupil.001
+    400012: BodyBone
+    400014: EarEnd.L
+    400016: EarEnd.L_end
+    400018: EarEnd.R
+    400020: EarEnd.R_end
+    400022: EarMiddleBone.L
+    400024: EarMiddleBone.R
+    400026: EarStartBone.L
+    400028: EarStartBone.R
+    400030: EyeBulbBone.L
+    400032: EyeBulbBone.R
+    400034: EyePupilBone.L
+    400036: EyePupilBone.L_end
+    400038: EyePupilBone.R
+    400040: EyePupilBone.R_end
+    400042: FrontLegControl.L
+    400044: FrontLegControl.R
+    400046: FrontLegEndBone.L
+    400048: FrontLegEndBone.L_end
+    400050: FrontLegEndBone.R
+    400052: FrontLegEndBone.R_end
+    400054: FrontLegFootBone.L
+    400056: FrontLegFootBone.L_end
+    400058: FrontLegFootBone.R
+    400060: FrontLegFootBone.R_end
+    400062: FrontLegMiddleBone.L
+    400064: FrontLegMiddleBone.R
+    400066: FrontLegMovementBone.L
+    400068: FrontLegMovementBone.L_end
+    400070: FrontLegMovementBone.R
+    400072: FrontLegMovementBone.R_end
+    400074: FrontLegPoleTarget.L
+    400076: FrontLegPoleTarget.L_end
+    400078: FrontLegPoleTarget.R
+    400080: FrontLegPoleTarget.R_end
+    400082: FrontLegStartBone.L
+    400084: FrontLegStartBone.R
+    400086: HeadBone
+    400088: Labrador
+    400090: LabradorBody
+    400092: //RootNode
+    400094: MouthBone
+    400096: MouthBone_end
+    400098: NeckBone
+    400100: NoseBone
+    400102: NoseBone_end
+    400104: RearBone
+    400106: RearFootBone.L
+    400108: RearFootBone.L_end
+    400110: RearFootBone.R
+    400112: RearFootBone.R_end
+    400114: RearLegEndMiddle.L
+    400116: RearLegEndMiddle.L_end
+    400118: RearLegEndMiddle.R
+    400120: RearLegEndMiddle.R_end
+    400122: RearLegMiddleBone.L
+    400124: RearLegMiddleBone.R
+    400126: RearLegMovementBone.L
+    400128: RearLegMovementBone.L_end
+    400130: RearLegMovementBone.R
+    400132: RearLegMovementBone.R_end
+    400134: RearLegPoleTarget.L
+    400136: RearLegPoleTarget.L_end
+    400138: RearLegPoleTarget.R
+    400140: RearLegPoleTarget.R_end
+    400142: RearLegStartBone.L
+    400144: RearLegStartBone.R
+    400146: TailEndBone
+    400148: TailEndBone_end
+    400150: TailEndMiddleBone
+    400152: TailStartBone
+    400154: TailStartMiddleBone
+    400156: TorsoBone
+    400158: ToungeMiddleBone
+    400160: ToungeMiddleBone.001
+    400162: ToungeMiddleBone.001_end
+    400164: ToungeTopBone
+    4300000: BeagleRightPupil.001
+    4300002: BeagleRightEye.001
+    4300004: BeagleLeftPupil.001
+    4300006: BeagleLeftEye.001
+    4300008: LabradorBody
+    7400000: Labrador|deleteMe
+    7400002: Labrador|deleteMe.001
+    7400004: Labrador|Dog_RunRealistic.001
+    7400006: Labrador|Dog_RunRealisticLookRight.000
+    7400008: Labrador|Dog_RunRealisticLookRight.001
+    7400010: Labrador|Idle
+    7400012: Labrador|IdleLookLeftAndRight
+    7400014: Labrador|IdleLookLeftAndRight.001
+    7400016: Labrador|IdleLookLeftAndRight.002
+    7400018: Labrador|RealisticRun
+    7400020: Labrador|RealisticRun.001
+    7400022: Labrador|RealisticRun_LookLeft
+    7400024: Labrador|RealisticRun_LookLeft.001
+    7400026: Labrador|RealisticRun_LookRight
+    7400028: Labrador|RealisticRun_LookRight.001
+    7400030: Labrador|Run
+    7400032: Labrador|Run.001
+    7400034: Labrador|Walkback
+    7400036: Labrador|Walkback.001
+    7400038: Labrador|Walkback.002
+    7400040: Labrador|Walkback.003
+    9500000: //RootNode
+    13700000: BeagleLeftEye.001
+    13700002: BeagleLeftPupil.001
+    13700004: BeagleRightEye.001
+    13700006: BeagleRightPupil.001
+    13700008: LabradorBody
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Labrador|Idle
+      takeName: Labrador|Idle
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.001
+        weight: 1
+      - path: BeagleLeftPupil.001
+        weight: 1
+      - path: BeagleRightEye.001
+        weight: 1
+      - path: BeagleRightPupil.001
+        weight: 1
+      - path: Labrador
+        weight: 1
+      - path: Labrador/BackLegControl.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: LabradorBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Labrador|IdleLookLeftAndRight
+      takeName: Labrador|IdleLookLeftAndRight
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.001
+        weight: 1
+      - path: BeagleLeftPupil.001
+        weight: 1
+      - path: BeagleRightEye.001
+        weight: 1
+      - path: BeagleRightPupil.001
+        weight: 1
+      - path: Labrador
+        weight: 1
+      - path: Labrador/BackLegControl.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: LabradorBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Labrador|RealisticRun
+      takeName: Labrador|RealisticRun
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.001
+        weight: 1
+      - path: BeagleLeftPupil.001
+        weight: 1
+      - path: BeagleRightEye.001
+        weight: 1
+      - path: BeagleRightPupil.001
+        weight: 1
+      - path: Labrador
+        weight: 1
+      - path: Labrador/BackLegControl.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: LabradorBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Labrador|RealisticRun_LookLeft
+      takeName: Labrador|RealisticRun_LookLeft
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.001
+        weight: 1
+      - path: BeagleLeftPupil.001
+        weight: 1
+      - path: BeagleRightEye.001
+        weight: 1
+      - path: BeagleRightPupil.001
+        weight: 1
+      - path: Labrador
+        weight: 1
+      - path: Labrador/BackLegControl.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: LabradorBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Labrador|RealisticRun_LookRight
+      takeName: Labrador|RealisticRun_LookRight
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.001
+        weight: 1
+      - path: BeagleLeftPupil.001
+        weight: 1
+      - path: BeagleRightEye.001
+        weight: 1
+      - path: BeagleRightPupil.001
+        weight: 1
+      - path: Labrador
+        weight: 1
+      - path: Labrador/BackLegControl.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: LabradorBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Labrador|Run
+      takeName: Labrador|Run
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.001
+        weight: 1
+      - path: BeagleLeftPupil.001
+        weight: 1
+      - path: BeagleRightEye.001
+        weight: 1
+      - path: BeagleRightPupil.001
+        weight: 1
+      - path: Labrador
+        weight: 1
+      - path: Labrador/BackLegControl.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: LabradorBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Labrador|Walkback
+      takeName: Labrador|Walkback
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BeagleLeftEye.001
+        weight: 1
+      - path: BeagleLeftPupil.001
+        weight: 1
+      - path: BeagleRightEye.001
+        weight: 1
+      - path: BeagleRightPupil.001
+        weight: 1
+      - path: Labrador
+        weight: 1
+      - path: Labrador/BackLegControl.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearFootBone.L/RearFootBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L
+        weight: 1
+      - path: Labrador/BackLegControl.L/RearLegMovementBone.L/RearLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/BackLegControl.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearFootBone.R/RearFootBone.R_end
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R
+        weight: 1
+      - path: Labrador/BackLegControl.R/RearLegMovementBone.R/RearLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone
+        weight: 1
+      - path: Labrador/BodyBone/RearBone/TailStartBone/TailStartMiddleBone/TailEndMiddleBone/TailEndBone/TailEndBone_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.L/RearLegMiddleBone.L/RearLegEndMiddle.L/RearLegEndMiddle.L_end
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R
+        weight: 1
+      - path: Labrador/BodyBone/RearLegStartBone.R/RearLegMiddleBone.R/RearLegEndMiddle.R/RearLegEndMiddle.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.L/FrontLegMiddleBone.L/FrontLegEndBone.L/FrontLegEndBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/FrontLegStartBone.R/FrontLegMiddleBone.R/FrontLegEndBone.R/FrontLegEndBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.L/EarMiddleBone.L/EarEnd.L/EarEnd.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EarStartBone.R/EarMiddleBone.R/EarEnd.R/EarEnd.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.L/EyePupilBone.L/EyePupilBone.L_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/EyeBulbBone.R/EyePupilBone.R/EyePupilBone.R_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/MouthBone/MouthBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/NoseBone/NoseBone_end
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001
+        weight: 1
+      - path: Labrador/BodyBone/TorsoBone/NeckBone/HeadBone/ToungeTopBone/ToungeMiddleBone/ToungeMiddleBone.001/ToungeMiddleBone.001_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegFootBone.L/FrontLegFootBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L
+        weight: 1
+      - path: Labrador/FrontLegControl.L/FrontLegMovementBone.L/FrontLegMovementBone.L_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegFootBone.R/FrontLegFootBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R
+        weight: 1
+      - path: Labrador/FrontLegControl.R/FrontLegMovementBone.R/FrontLegMovementBone.R_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.L/FrontLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R
+        weight: 1
+      - path: Labrador/FrontLegPoleTarget.R/FrontLegPoleTarget.R_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.L/RearLegPoleTarget.L_end
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R
+        weight: 1
+      - path: Labrador/RearLegPoleTarget.R/RearLegPoleTarget.R_end
+        weight: 1
+      - path: LabradorBody
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

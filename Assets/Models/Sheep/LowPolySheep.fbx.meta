@@ -1,0 +1,869 @@
+fileFormatVersion: 2
+guid: 4b0d6d3cd70293c479308a2fc9f71d7e
+timeCreated: 1484698038
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Body
+    100004: BodyBone
+    100006: HairBone
+    100008: HairBone_end
+    100010: HeadBone
+    100012: HeadBone_end
+    100014: Icosphere
+    100016: L.BottomEarBone
+    100018: L.BottomEarBone_end
+    100020: L.EyeBone
+    100022: L.FrontLegBone
+    100024: L.FrontLegBone_end
+    100026: L.PupilBone
+    100028: L.PupilBone_end
+    100030: L.RearLegBone
+    100032: L.RearLegBone_end
+    100034: L.TopEarBone
+    100036: NeckBone
+    100038: R.BottomEarBone
+    100040: R.BottomEarBone_end
+    100042: R.EyeBone
+    100044: R.FrontLegBone
+    100046: R.FrontLegBone_end
+    100048: R.PupilBone
+    100050: R.PupilBone_end
+    100052: R.RearLegBone
+    100054: R.RearLegBone_end
+    100056: R.TopEarBone
+    100058: Sphere.028
+    100060: Sphere.029
+    100062: Sphere.030
+    100064: Sphere.031
+    100066: Sphere.032
+    100068: Sphere.033
+    100070: Sphere.034
+    100072: Sphere.035
+    100074: Sphere.036
+    100076: Sphere.037
+    100078: TailBone
+    100080: TailBone_end
+    100082: TopHeadBone
+    400000: //RootNode
+    400002: Body
+    400004: BodyBone
+    400006: HairBone
+    400008: HairBone_end
+    400010: HeadBone
+    400012: HeadBone_end
+    400014: Icosphere
+    400016: L.BottomEarBone
+    400018: L.BottomEarBone_end
+    400020: L.EyeBone
+    400022: L.FrontLegBone
+    400024: L.FrontLegBone_end
+    400026: L.PupilBone
+    400028: L.PupilBone_end
+    400030: L.RearLegBone
+    400032: L.RearLegBone_end
+    400034: L.TopEarBone
+    400036: NeckBone
+    400038: R.BottomEarBone
+    400040: R.BottomEarBone_end
+    400042: R.EyeBone
+    400044: R.FrontLegBone
+    400046: R.FrontLegBone_end
+    400048: R.PupilBone
+    400050: R.PupilBone_end
+    400052: R.RearLegBone
+    400054: R.RearLegBone_end
+    400056: R.TopEarBone
+    400058: Sphere.028
+    400060: Sphere.029
+    400062: Sphere.030
+    400064: Sphere.031
+    400066: Sphere.032
+    400068: Sphere.033
+    400070: Sphere.034
+    400072: Sphere.035
+    400074: Sphere.036
+    400076: Sphere.037
+    400078: TailBone
+    400080: TailBone_end
+    400082: TopHeadBone
+    2300000: Icosphere
+    2300002: Sphere.029
+    2300004: Sphere.030
+    2300006: Sphere.031
+    2300008: Sphere.032
+    2300010: Sphere.034
+    2300012: Sphere.035
+    2300014: Sphere.036
+    2300016: Sphere.037
+    3300000: Icosphere
+    3300002: Sphere.029
+    3300004: Sphere.030
+    3300006: Sphere.031
+    3300008: Sphere.032
+    3300010: Sphere.034
+    3300012: Sphere.035
+    3300014: Sphere.036
+    3300016: Sphere.037
+    4300000: Sphere.035
+    4300002: Sphere.036
+    4300004: Sphere.037
+    4300006: Sphere.034
+    4300008: Icosphere
+    4300010: Sphere.029
+    4300012: Sphere.032
+    4300014: Sphere.031
+    4300016: Sphere.030
+    4300018: Sphere.028
+    4300020: Sphere.033
+    7400000: Body|EatingGrass
+    7400002: Body|Idle
+    7400004: Body|Look
+    7400006: Body|Run
+    7400008: Body|StartEatingGrass
+    7400010: Body|Walk
+    9500000: //RootNode
+    13700000: Sphere.028
+    13700002: Sphere.033
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Body|EatingGrass
+      takeName: Body|EatingGrass
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Body/BodyBone
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone/L.FrontLegBone_end
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone/Sphere.030
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone/L.RearLegBone_end
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone/Sphere.029
+        weight: 1
+      - path: Body/BodyBone/NeckBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/HeadBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/HeadBone/HeadBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone/L.PupilBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone/Sphere.034
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/Sphere.037
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone/L.BottomEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone/L.BottomEarBone/L.BottomEarBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone/R.PupilBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone/Sphere.036
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/Sphere.035
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone/R.BottomEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone/R.BottomEarBone/R.BottomEarBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone/HairBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone/HairBone/HairBone_end
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone/R.FrontLegBone_end
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone/Sphere.031
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone/R.RearLegBone_end
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone/Sphere.032
+        weight: 1
+      - path: Body/BodyBone/TailBone
+        weight: 1
+      - path: Body/BodyBone/TailBone/Icosphere
+        weight: 1
+      - path: Body/BodyBone/TailBone/TailBone_end
+        weight: 1
+      - path: Sphere.028
+        weight: 1
+      - path: Sphere.033
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Body|Idle
+      takeName: Body|Idle
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Body/BodyBone
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone/L.FrontLegBone_end
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone/Sphere.030
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone/L.RearLegBone_end
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone/Sphere.029
+        weight: 1
+      - path: Body/BodyBone/NeckBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/HeadBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/HeadBone/HeadBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone/L.PupilBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone/Sphere.034
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/Sphere.037
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone/L.BottomEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone/L.BottomEarBone/L.BottomEarBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone/R.PupilBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone/Sphere.036
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/Sphere.035
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone/R.BottomEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone/R.BottomEarBone/R.BottomEarBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone/HairBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone/HairBone/HairBone_end
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone/R.FrontLegBone_end
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone/Sphere.031
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone/R.RearLegBone_end
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone/Sphere.032
+        weight: 1
+      - path: Body/BodyBone/TailBone
+        weight: 1
+      - path: Body/BodyBone/TailBone/Icosphere
+        weight: 1
+      - path: Body/BodyBone/TailBone/TailBone_end
+        weight: 1
+      - path: Sphere.028
+        weight: 1
+      - path: Sphere.033
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Body|Look
+      takeName: Body|Look
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Body/BodyBone
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone/L.FrontLegBone_end
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone/Sphere.030
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone/L.RearLegBone_end
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone/Sphere.029
+        weight: 1
+      - path: Body/BodyBone/NeckBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/HeadBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/HeadBone/HeadBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone/L.PupilBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone/Sphere.034
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/Sphere.037
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone/L.BottomEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone/L.BottomEarBone/L.BottomEarBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone/R.PupilBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone/Sphere.036
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/Sphere.035
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone/R.BottomEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone/R.BottomEarBone/R.BottomEarBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone/HairBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone/HairBone/HairBone_end
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone/R.FrontLegBone_end
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone/Sphere.031
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone/R.RearLegBone_end
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone/Sphere.032
+        weight: 1
+      - path: Body/BodyBone/TailBone
+        weight: 1
+      - path: Body/BodyBone/TailBone/Icosphere
+        weight: 1
+      - path: Body/BodyBone/TailBone/TailBone_end
+        weight: 1
+      - path: Sphere.028
+        weight: 1
+      - path: Sphere.033
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Body|Run
+      takeName: Body|Run
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Body/BodyBone
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone/L.FrontLegBone_end
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone/Sphere.030
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone/L.RearLegBone_end
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone/Sphere.029
+        weight: 1
+      - path: Body/BodyBone/NeckBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/HeadBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/HeadBone/HeadBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone/L.PupilBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone/Sphere.034
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/Sphere.037
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone/L.BottomEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone/L.BottomEarBone/L.BottomEarBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone/R.PupilBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone/Sphere.036
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/Sphere.035
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone/R.BottomEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone/R.BottomEarBone/R.BottomEarBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone/HairBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone/HairBone/HairBone_end
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone/R.FrontLegBone_end
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone/Sphere.031
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone/R.RearLegBone_end
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone/Sphere.032
+        weight: 1
+      - path: Body/BodyBone/TailBone
+        weight: 1
+      - path: Body/BodyBone/TailBone/Icosphere
+        weight: 1
+      - path: Body/BodyBone/TailBone/TailBone_end
+        weight: 1
+      - path: Sphere.028
+        weight: 1
+      - path: Sphere.033
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Body|StartEatingGrass
+      takeName: Body|StartEatingGrass
+      firstFrame: 0
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Body/BodyBone
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone/L.FrontLegBone_end
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone/Sphere.030
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone/L.RearLegBone_end
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone/Sphere.029
+        weight: 1
+      - path: Body/BodyBone/NeckBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/HeadBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/HeadBone/HeadBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone/L.PupilBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone/Sphere.034
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/Sphere.037
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone/L.BottomEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone/L.BottomEarBone/L.BottomEarBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone/R.PupilBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone/Sphere.036
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/Sphere.035
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone/R.BottomEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone/R.BottomEarBone/R.BottomEarBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone/HairBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone/HairBone/HairBone_end
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone/R.FrontLegBone_end
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone/Sphere.031
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone/R.RearLegBone_end
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone/Sphere.032
+        weight: 1
+      - path: Body/BodyBone/TailBone
+        weight: 1
+      - path: Body/BodyBone/TailBone/Icosphere
+        weight: 1
+      - path: Body/BodyBone/TailBone/TailBone_end
+        weight: 1
+      - path: Sphere.028
+        weight: 1
+      - path: Sphere.033
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Body|Walk
+      takeName: Body|Walk
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Body/BodyBone
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone/L.FrontLegBone_end
+        weight: 1
+      - path: Body/BodyBone/L.FrontLegBone/Sphere.030
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone/L.RearLegBone_end
+        weight: 1
+      - path: Body/BodyBone/L.RearLegBone/Sphere.029
+        weight: 1
+      - path: Body/BodyBone/NeckBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/HeadBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/HeadBone/HeadBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone/L.PupilBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/L.PupilBone/Sphere.034
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.EyeBone/Sphere.037
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone/L.BottomEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/L.TopEarBone/L.BottomEarBone/L.BottomEarBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone/R.PupilBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/R.PupilBone/Sphere.036
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.EyeBone/Sphere.035
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone/R.BottomEarBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/R.TopEarBone/R.BottomEarBone/R.BottomEarBone_end
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone/HairBone
+        weight: 1
+      - path: Body/BodyBone/NeckBone/TopHeadBone/HairBone/HairBone_end
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone/R.FrontLegBone_end
+        weight: 1
+      - path: Body/BodyBone/R.FrontLegBone/Sphere.031
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone/R.RearLegBone_end
+        weight: 1
+      - path: Body/BodyBone/R.RearLegBone/Sphere.032
+        weight: 1
+      - path: Body/BodyBone/TailBone
+        weight: 1
+      - path: Body/BodyBone/TailBone/Icosphere
+        weight: 1
+      - path: Body/BodyBone/TailBone/TailBone_end
+        weight: 1
+      - path: Sphere.028
+        weight: 1
+      - path: Sphere.033
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
