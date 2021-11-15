@@ -280,11 +280,13 @@ class ShepherdSimulation:
             # perform herding
 
             # compute driving Point
-            P_d = self.sheep_com + np.linalg.norm(self.sheep_com - self.target) * self.sheep_repulsion_dist * (
-                np.sqrt(self.num_sheep))
-            dog_driving_direction = P_d - self.dog_pose
+            direction = self.sheep_com - self.target
+            direction /= np.linalg.norm(direction)
 
-            int_goal = P_d
+            factor = self.sheep_repulsion_dist * (np.sqrt(self.num_sheep))
+
+            # get intermediate collecting goal; P_d
+            int_goal = self.sheep_com + (direction*factor)
 
         else:
             # perform collecting
