@@ -24,37 +24,40 @@ class ShepherdSimulation:
         self.dog_collect_radius = 2.0
 
         # weight multipliers for sheep forces
-        self.lcm_term = 1.05  # relative strength of attraction to the n nearest neighbors
-        self.noise_term = 0.3
-        self.inertia_term = 0.5
-        self.repulsion_dog_term = 1.0
-        self.repulsion_sheep_term = 2.0
+        self.lcm_term = 1.05  # relative strength of attraction to the n nearest neighbors, c
+        self.noise_term = 0.3  # relative strength of angular noise, e
+        self.inertia_term = 0.5  # relative strength of proceeding in the previous direction, h
+        self.repulsion_dog_term = 1.0  # relative strength of repulsion from the shepherd
+        self.repulsion_sheep_term = 2.0  # relative strength of repulsion from other agents
 
         ## constants used to update environment
         # delta [m ts^(-1) ???] agent displacement per time step
         self.delta_sheep_pose = 1.0
         # r_s [m] shepherd detection distance
-        self.dog_repulsion_dist = 70.0
+        self.dog_repulsion_dist = 65.0
         # r_a [m] agent to agent interaction distance
         self.sheep_repulsion_dist = 2.0
 
         # total number of sheep, N
         self.num_sheep = num_sheep
 
+        # length of field size, L
+        self.field_length = 150
+
         # number of nearest neighbors (for LCM), n
         self.num_sheep_neighbors = int(self.num_sheep / 2)
 
         # initialize target position
-        self.target = np.array([0, 0])
+        self.target = np.array([3, 3])
 
         # initialize sheep positions
-        init_sheep_pose = np.random.uniform(-200.0, 200.0, size=(2))
-        self.sheep_poses = (np.random.uniform(-50.0, 50.0, size=(self.num_sheep, 2))) \
-                           + init_sheep_pose[None, :]
+        field_center = np.array([self.field_length // 2, self.field_length // 2])
+        init_sheep_pose = np.random.uniform(0, self.field_length // 2, size=(self.num_sheep, 2)) + field_center
+        self.sheep_poses = init_sheep_pose
         self.sheep_com = self.sheep_poses.mean(axis=0)
 
         # initialize dog position
-        init_dog_pose = init_sheep_pose + 75.0 * (2 * np.random.randint(2, size=(2)) - 1)
+        init_dog_pose = np.array([0, 0])
         self.dog_pose = init_dog_pose
 
         # initialize dog displacement per time step (speed, delta_s)
@@ -87,7 +90,7 @@ class ShepherdSimulation:
             counter += 1
 
             # get the new dog position
-            #self.dog_heuristic_model()
+            # self.dog_heuristic_model()
             self.dog_strombom_model()
 
             # find new inertia
@@ -102,8 +105,9 @@ class ShepherdSimulation:
                 plt.scatter(self.sheep_poses[:, 0], self.sheep_poses[:, 1], c='b', s=50, label='Sheep')
 
                 plt.title('Shepherding')
-                plt.xlim([-300, 300])
-                plt.ylim([-300, 300])
+                border = 20
+                plt.xlim([0 - border, self.field_length + border])
+                plt.ylim([0 - border, self.field_length + border])
                 plt.legend()
                 plt.draw()
                 plt.pause(0.01)
@@ -276,7 +280,8 @@ class ShepherdSimulation:
             # perform herding
 
             # compute driving Point
-            P_d = self.sheep_com + np.linalg.norm(self.sheep_com - self.target)*self.sheep_repulsion_dist*(np.sqrt(self.num_sheep))
+            P_d = self.sheep_com + np.linalg.norm(self.sheep_com - self.target) * self.sheep_repulsion_dist * (
+                np.sqrt(self.num_sheep))
             dog_driving_direction = P_d - self.dog_pose
 
             int_goal = P_d
@@ -304,7 +309,7 @@ class ShepherdSimulation:
 
         # update position
         # ToDo: add noise
-        self.dog_pose = self.dog_pose + self.dog_speed*direction
+        self.dog_pose = self.dog_pose + self.dog_speed * direction
 
 
 def main():
