@@ -283,7 +283,7 @@ class ShepherdSimulation:
 
         # check if a sheep is closer than r_a to dog, if yes stop walking
         dist_sheep_dog = np.linalg.norm(self.sheep_poses - self.dog_pose, axis=1)
-        if np.max(dist_sheep_dog) < 3 * self.sheep_repulsion_dist:
+        if np.min(dist_sheep_dog) < 3 * self.sheep_repulsion_dist:
             self.dog_pose = self.dog_pose
             return
 
@@ -335,7 +335,7 @@ class ShepherdSimulation:
 
 
 def main():
-    shepherd_sim = ShepherdSimulation(num_sheep=200)
+    shepherd_sim = ShepherdSimulation(num_sheep=30)
     shepherd_sim.run(render=True)
 
 
