@@ -149,12 +149,9 @@ class ShepherdSimulation:
         num_near_sheep = len(inertia_sheep_near_dog)
 
         # compute a distance matrix
-        distance_matrix = np.zeros((num_near_sheep, num_near_sheep))
-        for i in range(num_near_sheep):
-            for j in range(i):
-                dist = np.linalg.norm(self.sheep_poses[i, :] - self.sheep_poses[j, :])
-                distance_matrix[i, j] = dist
-                distance_matrix[j, i] = dist
+        distance_matrix = np.sqrt(-2 * np.dot(self.sheep_poses[indices,:], self.sheep_poses[indices,:].T)
+                                  + np.sum(self.sheep_poses[indices,:] ** 2, axis=1) + np.sum(self.sheep_poses[indices,:] ** 2, axis=1)[:,
+                                                                            np.newaxis])
 
         # find the sheep which are within sheep repulsion distance between each other
         xvals, yvals = np.where((distance_matrix < self.sheep_repulsion_dist) & (distance_matrix != 0))
@@ -338,8 +335,8 @@ class ShepherdSimulation:
 
 
 def main():
-    shepherd_sim = ShepherdSimulation(num_sheep=25)
-    shepherd_sim.run(render=False)
+    shepherd_sim = ShepherdSimulation(num_sheep=200)
+    shepherd_sim.run(render=True)
 
 
 if __name__ == '__main__':
