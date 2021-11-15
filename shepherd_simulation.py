@@ -117,13 +117,8 @@ class ShepherdSimulation:
 
     # function to find new inertia for sheep
     def update_environment(self):
-        # compute a distance matrix
-        distance_matrix = np.zeros((self.num_sheep, self.num_sheep))
-        for i in range(self.num_sheep):
-            for j in range(i):
-                dist = np.linalg.norm(self.sheep_poses[i, :] - self.sheep_poses[j, :])
-                distance_matrix[i, j] = dist
-                distance_matrix[j, i] = dist
+        distance_matrix = np.sqrt(-2 * np.dot(self.sheep_poses, self.sheep_poses.T)
+            + np.sum(self.sheep_poses**2, axis=1) + np.sum(self.sheep_poses**2, axis=1)[:, np.newaxis])
 
         # find the sheep which are within sheep repulsion distance between each other
         xvals, yvals = np.where((distance_matrix < self.sheep_repulsion_dist) & (distance_matrix != 0))
