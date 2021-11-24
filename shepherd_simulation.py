@@ -330,15 +330,12 @@ class ShepherdSimulation:
         direction /= np.linalg.norm(direction)
 
         # error term
-        inds_sheep_near_dog = dist_sheep_dog < self.dog_repulsion_dist
-        inertia_sheep_near_dog = self.inertia[inds_sheep_near_dog, :]
-        num_near_sheep = len(inertia_sheep_near_dog)
-        noise = np.random.randn(num_near_sheep, 2)
-        noise /= np.linalg.norm(noise, axis=1, keepdims=True)
+        noise = np.random.randn(2)
+        noise /= np.linalg.norm(noise, keepdims=True)
 
         # update position
-        # ToDo: add noise
-        self.dog_pose = self.dog_pose + self.dog_speed * direction
+        self.dog_pose = self.dog_pose + self.dog_speed * direction + self.noise_term*noise
+
 
 
 def main():
