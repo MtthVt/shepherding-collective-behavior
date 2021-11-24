@@ -6,13 +6,13 @@
 """
 
 # suppress runtime warnings
+import matplotlib.pyplot as plt
+import numpy as np
 import warnings
 
 warnings.filterwarnings("ignore")
 
 # import libraries
-import numpy as np
-import matplotlib.pyplot as plt
 
 
 # class implementation of shepherding
@@ -31,7 +31,7 @@ class ShepherdSimulation:
         self.repulsion_sheep_term = 2.0  # relative strength of repulsion from other agents
         self.grazing_prob = 0.05  # probability of moving per time step while grazing
 
-        ## constants used to update environment
+        # constants used to update environment
         # delta [m ts^(-1) ???] agent displacement per time step
         self.delta_sheep_pose = 1.0
         # r_s [m] shepherd detection distance
@@ -52,8 +52,10 @@ class ShepherdSimulation:
         self.target = np.array([3, 3])
 
         # initialize sheep positions
-        field_center = np.array([self.field_length // 2, self.field_length // 2])
-        init_sheep_pose = np.random.uniform(0, self.field_length // 2, size=(self.num_sheep, 2)) + field_center
+        field_center = np.array(
+            [self.field_length // 2, self.field_length // 2])
+        init_sheep_pose = np.random.uniform(
+            0, self.field_length // 2, size=(self.num_sheep, 2)) + field_center
         self.sheep_poses = init_sheep_pose
         self.sheep_com = self.sheep_poses.mean(axis=0)
 
@@ -101,9 +103,12 @@ class ShepherdSimulation:
             if counter % 5 == 0 and render:
                 plt.clf()
 
-                plt.scatter(self.target[0], self.target[1], c='g', s=40, label='Goal')
-                plt.scatter(self.dog_pose[0], self.dog_pose[1], c='r', s=50, label='Dog')
-                plt.scatter(self.sheep_poses[:, 0], self.sheep_poses[:, 1], c='b', s=50, label='Sheep')
+                plt.scatter(self.target[0], self.target[1],
+                            c='g', s=40, label='Goal')
+                plt.scatter(
+                    self.dog_pose[0], self.dog_pose[1], c='r', s=50, label='Dog')
+                plt.scatter(
+                    self.sheep_poses[:, 0], self.sheep_poses[:, 1], c='b', s=50, label='Sheep')
 
                 plt.title('Shepherding')
                 border = 20
@@ -119,7 +124,8 @@ class ShepherdSimulation:
     # function to find new inertia for sheep
     def update_environment(self):
         # find sheep near and far dog
-        dist_to_dog = np.linalg.norm((self.sheep_poses - self.dog_pose[None, :]), axis=1)
+        dist_to_dog = np.linalg.norm(
+            (self.sheep_poses - self.dog_pose[None, :]), axis=1)
 
         inds_sheep_near_dog = dist_to_dog < self.dog_repulsion_dist
         self.__compute_inertia_for_sheep_near_from_dog(inds_sheep_near_dog)
@@ -137,8 +143,10 @@ class ShepherdSimulation:
 
         # compute random movements while grazing (with prob self.grazing_prob)
         inertia_sheep_far_dog = np.zeros(inertia_sheep_far_dog.shape)
-        moving_sheep = np.random.choice([True, False], num_far_sheep, p=[self.grazing_prob, 1 - self.grazing_prob])
-        inertia_sheep_far_dog[moving_sheep, :] = np.random.randn(inertia_sheep_far_dog[moving_sheep, :].shape[0], 2)
+        moving_sheep = np.random.choice([True, False], num_far_sheep, p=[
+                                        self.grazing_prob, 1 - self.grazing_prob])
+        inertia_sheep_far_dog[moving_sheep, :] = np.random.randn(
+            inertia_sheep_far_dog[moving_sheep, :].shape[0], 2)
         inertia_sheep_far_dog[moving_sheep, :] = np.linalg.norm(inertia_sheep_far_dog[moving_sheep, :], axis=1,
                                                                 keepdims=True)
         # update general inertia
@@ -149,12 +157,13 @@ class ShepherdSimulation:
         num_near_sheep = len(inertia_sheep_near_dog)
 
         # compute a distance matrix
-        distance_matrix = np.sqrt(-2 * np.dot(self.sheep_poses[indices,:], self.sheep_poses[indices,:].T)
-                                  + np.sum(self.sheep_poses[indices,:] ** 2, axis=1) + np.sum(self.sheep_poses[indices,:] ** 2, axis=1)[:,
-                                                                            np.newaxis])
+        distance_matrix = np.sqrt(-2 * np.dot(self.sheep_poses[indices, :], self.sheep_poses[indices, :].T)
+                                  + np.sum(self.sheep_poses[indices, :] ** 2, axis=1) + np.sum(self.sheep_poses[indices, :] ** 2, axis=1)[:,
+                                                                                                                                          np.newaxis])
 
         # find the sheep which are within sheep repulsion distance between each other
-        xvals, yvals = np.where((distance_matrix < self.sheep_repulsion_dist) & (distance_matrix != 0))
+        xvals, yvals = np.where(
+            (distance_matrix < self.sheep_repulsion_dist) & (distance_matrix != 0))
         # list of interacting sheep id pairs (both ways included - i.e. [1,2] & [2,1])
         interact = np.hstack((xvals[:, None], yvals[:, None]))
 
@@ -163,11 +172,13 @@ class ShepherdSimulation:
 
         for val in range(num_near_sheep):
             iv = interact[interact[:, 0] == val, 1]
-            transit = self.sheep_poses[val, :][None, :] - self.sheep_poses[iv, :]
+            transit = self.sheep_poses[val, :][None,
+                                               :] - self.sheep_poses[iv, :]
             transit /= np.linalg.norm(transit, axis=1, keepdims=True)
             repulsion_sheep[val, :] = np.sum(transit, axis=0)
 
-        repulsion_sheep /= np.linalg.norm(repulsion_sheep, axis=1, keepdims=True)
+        repulsion_sheep /= np.linalg.norm(repulsion_sheep,
+                                          axis=1, keepdims=True)
         repulsion_sheep[np.isnan(repulsion_sheep)] = 0
 
         # repulsion from dog
@@ -176,11 +187,13 @@ class ShepherdSimulation:
         repulsion_dog[np.isnan(repulsion_dog)] = 0
 
         # attraction to LCMs
-        sheep_neighbors = np.argsort(distance_matrix, axis=1)[:, 0:self.num_sheep_neighbors + 1]
+        sheep_neighbors = np.argsort(distance_matrix, axis=1)[
+            :, 0:self.num_sheep_neighbors + 1]
         sheep_lcms = np.zeros((num_near_sheep, 2))
 
         for i in range(num_near_sheep):
-            sheep_lcms[i, :] = self.sheep_poses[sheep_neighbors[i]].mean(axis=0)
+            sheep_lcms[i, :] = self.sheep_poses[sheep_neighbors[i]].mean(
+                axis=0)
 
         attraction_lcm = sheep_lcms - self.sheep_poses[indices, :]
         attraction_lcm /= np.linalg.norm(attraction_lcm, axis=1, keepdims=True)
@@ -192,11 +205,12 @@ class ShepherdSimulation:
 
         # compute sheep motion direction
         inertia_sheep_near_dog = self.inertia_term * inertia_sheep_near_dog + self.lcm_term * attraction_lcm + \
-                                 self.repulsion_sheep_term * repulsion_sheep + self.repulsion_dog_term * repulsion_dog + \
-                                 self.noise_term * noise
+            self.repulsion_sheep_term * repulsion_sheep + self.repulsion_dog_term * repulsion_dog + \
+            self.noise_term * noise
 
         # normalize the inertia terms
-        inertia_sheep_near_dog /= np.linalg.norm(inertia_sheep_near_dog, axis=1, keepdims=True)
+        inertia_sheep_near_dog /= np.linalg.norm(
+            inertia_sheep_near_dog, axis=1, keepdims=True)
         inertia_sheep_near_dog[np.isnan(inertia_sheep_near_dog)] = 0
 
         # update general inertia
@@ -207,7 +221,8 @@ class ShepherdSimulation:
 
         # check if sheep are within field
         field = self.dog_collect_radius * (self.num_sheep ** (2 / 3))
-        dist_to_com = np.linalg.norm((self.sheep_poses - self.sheep_com[None, :]), axis=1)
+        dist_to_com = np.linalg.norm(
+            (self.sheep_poses - self.sheep_com[None, :]), axis=1)
 
         is_within_field = False
         if np.max(dist_to_com) < field:
@@ -230,7 +245,8 @@ class ShepherdSimulation:
             # perform collecting
 
             # get the farthest sheep
-            dist_to_com = np.linalg.norm((self.sheep_poses - self.sheep_com[None, :]), axis=1)
+            dist_to_com = np.linalg.norm(
+                (self.sheep_poses - self.sheep_com[None, :]), axis=1)
             farthest_sheep = self.sheep_poses[np.argmax(dist_to_com), :]
 
             # compute the direction
@@ -244,7 +260,8 @@ class ShepherdSimulation:
             int_goal = farthest_sheep + (direction * factor)
 
         # find distances of dog to sheep
-        dist_to_dog = np.linalg.norm((self.sheep_poses - self.dog_pose[None, :]), axis=1)
+        dist_to_dog = np.linalg.norm(
+            (self.sheep_poses - self.dog_pose[None, :]), axis=1)
 
         # compute increments in x,y components
         direction = int_goal - self.dog_pose
@@ -282,14 +299,16 @@ class ShepherdSimulation:
     def dog_strombom_model(self):
 
         # check if a sheep is closer than r_a to dog, if yes stop walking
-        dist_sheep_dog = np.linalg.norm(self.sheep_poses - self.dog_pose, axis=1)
+        dist_sheep_dog = np.linalg.norm(
+            self.sheep_poses - self.dog_pose, axis=1)
         if np.min(dist_sheep_dog) < 3 * self.sheep_repulsion_dist:
             self.dog_pose = self.dog_pose
             return
 
         # check if sheep are within field
         field = self.sheep_repulsion_dist * (self.num_sheep ** (2 / 3))
-        dist_to_com = np.linalg.norm((self.sheep_poses - self.sheep_com[None, :]), axis=1)
+        dist_to_com = np.linalg.norm(
+            (self.sheep_poses - self.sheep_com[None, :]), axis=1)
 
         is_within_field = False
         if np.max(dist_to_com) < field:
@@ -312,7 +331,8 @@ class ShepherdSimulation:
             # perform collecting
 
             # get the farthest sheep
-            dist_to_com = np.linalg.norm((self.sheep_poses - self.sheep_com[None, :]), axis=1)
+            dist_to_com = np.linalg.norm(
+                (self.sheep_poses - self.sheep_com[None, :]), axis=1)
             farthest_sheep = self.sheep_poses[np.argmax(dist_to_com), :]
 
             # compute the direction
