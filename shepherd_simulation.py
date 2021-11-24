@@ -5,20 +5,19 @@
    Based on: https://github.com/buntyke/shepherd_gym
 """
 
-# suppress runtime warnings
 import matplotlib.pyplot as plt
 import numpy as np
 import warnings
 
+# suppress runtime warnings
 warnings.filterwarnings("ignore")
 
-# import libraries
-
-
 # class implementation of shepherding
+
+
 class ShepherdSimulation:
 
-    def __init__(self, num_sheep=25, init_radius=100):
+    def __init__(self, num_sheep_total=30, num_sheep_neighbors=15):
 
         # radius for sheep to be considered as collected by dog
         self.dog_collect_radius = 2.0
@@ -40,13 +39,13 @@ class ShepherdSimulation:
         self.sheep_repulsion_dist = 2.0
 
         # total number of sheep, N
-        self.num_sheep = num_sheep
+        self.num_sheep_total = num_sheep_total
 
         # length of field size, L
         self.field_length = 150
 
         # number of nearest neighbors (for LCM), n
-        self.num_sheep_neighbors = int(self.num_sheep / 2)
+        self.num_sheep_neighbors = num_sheep_neighbors
 
         # initialize target position
         self.target = np.array([3, 3])
@@ -55,7 +54,7 @@ class ShepherdSimulation:
         field_center = np.array(
             [self.field_length // 2, self.field_length // 2])
         init_sheep_pose = np.random.uniform(
-            0, self.field_length // 2, size=(self.num_sheep, 2)) + field_center
+            0, self.field_length // 2, size=(self.num_sheep_total, 2)) + field_center
         self.sheep_poses = init_sheep_pose
         self.sheep_com = self.sheep_poses.mean(axis=0)
 
@@ -67,7 +66,7 @@ class ShepherdSimulation:
         self.dog_speed = 1.5
 
         # initialize inertia
-        self.inertia = np.ones((self.num_sheep, 2))
+        self.inertia = np.ones((self.num_sheep_total, 2))
 
         # initialize maximum number of steps
         self.max_steps = 1500
@@ -216,85 +215,6 @@ class ShepherdSimulation:
         # update general inertia
         self.inertia[indices, :] = inertia_sheep_near_dog
 
-    # function to get new position of dog
-    def dog_heuristic_model(self):
-
-        # check if sheep are within field
-        field = self.dog_collect_radius * (self.num_sheep ** (2 / 3))
-        dist_to_com = np.linalg.norm(
-            (self.sheep_poses - self.sheep_com[None, :]), axis=1)
-
-        is_within_field = False
-        if np.max(dist_to_com) < field:
-            is_within_field = True
-
-        # determine the dog position
-        if is_within_field:
-            # perform herding
-
-            # compute the direction
-            direction = (self.sheep_com - self.target)
-            direction /= np.linalg.norm(direction)
-
-            # compute the factor
-            factor = self.dog_collect_radius * (np.sqrt(self.num_sheep))
-
-            # get intermediate herding goal
-            int_goal = self.sheep_com + (direction * factor)
-        else:
-            # perform collecting
-
-            # get the farthest sheep
-            dist_to_com = np.linalg.norm(
-                (self.sheep_poses - self.sheep_com[None, :]), axis=1)
-            farthest_sheep = self.sheep_poses[np.argmax(dist_to_com), :]
-
-            # compute the direction
-            direction = (farthest_sheep - self.sheep_com)
-            direction /= np.linalg.norm(direction)
-
-            # compute the distance factor
-            factor = self.dog_collect_radius
-
-            # get intermediate collecting goal
-            int_goal = farthest_sheep + (direction * factor)
-
-        # find distances of dog to sheep
-        dist_to_dog = np.linalg.norm(
-            (self.sheep_poses - self.dog_pose[None, :]), axis=1)
-
-        # compute increments in x,y components
-        direction = int_goal - self.dog_pose
-        direction /= np.linalg.norm(direction)
-
-        # discretize actions
-        theta = np.arctan2(direction[1], direction[0]) * 180 / np.pi
-
-        increment = np.array([0.0, 0.0])
-
-        if theta <= 22.5 and theta >= -22.5:
-            increment = np.array([1.5, 0.0])
-        elif theta <= 67.5 and theta > 22.5:
-            increment = np.array([1.225, 1.225])
-        elif theta <= 112.5 and theta > 67.5:
-            increment = np.array([0.0, 1.5])
-        elif theta <= 157.5 and theta > 112.5:
-            increment = np.array([-1.225, 1.225])
-        elif theta < -157.5 or theta > 157.5:
-            increment = np.array([-1.5, 0.0])
-        elif theta >= -157.5 and theta < -112.5:
-            increment = np.array([-1.225, -1.225])
-        elif theta >= -112.5 and theta < -67.5:
-            increment = np.array([0.0, -1.5])
-        elif theta >= -67.5 and theta < -22.5:
-            increment = np.array([1.225, -1.225])
-        else:
-            print('Error!')
-        print(increment)
-
-        # update position
-        self.dog_pose = self.dog_pose + increment
-
     # function to get new position of dog according to model presented in paper by Strombom et al.
     def dog_strombom_model(self):
 
@@ -306,7 +226,7 @@ class ShepherdSimulation:
             return
 
         # check if sheep are within field
-        field = self.sheep_repulsion_dist * (self.num_sheep ** (2 / 3))
+        field = self.sheep_repulsion_dist * (self.num_sheep_total ** (2 / 3))
         dist_to_com = np.linalg.norm(
             (self.sheep_poses - self.sheep_com[None, :]), axis=1)
 
@@ -322,7 +242,8 @@ class ShepherdSimulation:
             direction = self.sheep_com - self.target
             direction /= np.linalg.norm(direction)
 
-            factor = self.sheep_repulsion_dist * (np.sqrt(self.num_sheep))
+            factor = self.sheep_repulsion_dist * \
+                (np.sqrt(self.num_sheep_total))
 
             # get intermediate collecting goal; P_d
             int_goal = self.sheep_com + (direction * factor)
@@ -362,7 +283,8 @@ class ShepherdSimulation:
 
 
 def main():
-    shepherd_sim = ShepherdSimulation(num_sheep=30)
+    shepherd_sim = ShepherdSimulation(
+        num_sheep_total=30, num_sheep_neighbors=15)
     shepherd_sim.run(render=True)
 
 
