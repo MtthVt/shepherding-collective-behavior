@@ -71,11 +71,17 @@ class ShepherdSimulation:
         # initialize maximum number of steps
         self.max_steps = 1500
 
+        # field threshold params (for driving/collecting decision)
+        self.thresh_alpha = 1
+        self.thresh_beta = 2 / 3
+        self.thresh_gamma = 0
+
     # main function to perform simulation
-    def run(self, render=False):
+    def run(self, render=False, verbose=False):
 
         # start the simulation
-        print('Start simulation')
+        if verbose:
+            print('Start simulation')
 
         # initialize counter for plotting
         counter = 0
@@ -118,7 +124,9 @@ class ShepherdSimulation:
                 plt.pause(0.01)
 
         # complete execution
-        print('Finish simulation')
+        if verbose:
+            print('Finish simulation')
+        return counter, self.sheep_poses
 
     # function to find new inertia for sheep
     def update_environment(self):
@@ -226,7 +234,8 @@ class ShepherdSimulation:
             return
 
         # check if sheep are within field
-        field = self.sheep_repulsion_dist * (self.num_sheep_total ** (2 / 3))
+        field = self.thresh_alpha * self.sheep_repulsion_dist * \
+            (self.num_sheep_total ** self.thresh_beta) + self.thresh_gamma
         dist_to_com = np.linalg.norm(
             (self.sheep_poses - self.sheep_com[None, :]), axis=1)
 
@@ -281,11 +290,17 @@ class ShepherdSimulation:
         # ToDo: add noise
         self.dog_pose = self.dog_pose + self.dog_speed * direction
 
+    # set parameters related to field threshold calculation (used for genetic algorithm)
+    def set_thresh_field_params(self, alpha, beta, gamma):
+        self.thresh_alpha = alpha
+        self.thresh_beta = beta
+        self.thresh_gamma = gamma
+
 
 def main():
     shepherd_sim = ShepherdSimulation(
         num_sheep_total=30, num_sheep_neighbors=15)
-    shepherd_sim.run(render=True)
+    shepherd_sim.run(render=True, verbose=False)
 
 
 if __name__ == '__main__':
