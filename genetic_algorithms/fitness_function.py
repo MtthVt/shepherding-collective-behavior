@@ -1,8 +1,5 @@
-"""Main file with functions required for performing genetic algorithm parameters exploration
-"""
 import numpy as np
-import pygad
-from shepherd_simulation import ShepherdSimulation
+from genetic_algorithms.shepherd_simulation import ShepherdSimulation
 
 
 def fitness_func_single_sim(solution, num_sheep_total, num_sheep_neighbors):
@@ -41,21 +38,3 @@ def fitness_func(solution, solution_idx):
     total_score = np.sum(scores)
     print('Total score', 1 / total_score)
     return 1 / total_score
-
-
-def on_generation(ga):
-    print("Generation", ga.generations_completed)
-    print(ga.population)
-
-
-if __name__ == '__main__':
-    # just an initial sketch, to verify & improve
-    ga_instance = pygad.GA(num_generations=10, num_parents_mating=2, fitness_func=fitness_func, sol_per_pop=3, num_genes=3,
-                           gene_type=float, init_range_low=-1, init_range_high=2, parent_selection_type='sss', keep_parents=-1, on_generation=on_generation)
-
-    ga_instance.run()
-    solution, solution_fitness, solution_idx = ga_instance.best_solution()
-    print("Parameters of the best solution : {solution}".format(
-        solution=solution))
-    print("Fitness value of the best solution = {solution_fitness}".format(
-        solution_fitness=solution_fitness))
