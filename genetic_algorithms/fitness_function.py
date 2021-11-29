@@ -27,7 +27,7 @@ def fitness_func(solution, solution_idx):
     To be used in PyGAD, needs to be maximization function
     """
     scores = []
-    for N in range(43, 45, 2):
+    for N in range(30, 140, 2):
         for n in range(int(np.floor(3*np.log2(N))), int(np.ceil(0.53*N))):
             print(N, n)
             sc = fitness_func_single_sim(solution, N, n)
