@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore")
 
 class ShepherdSimulation:
 
-    def __init__(self, num_sheep_total=30, num_sheep_neighbors=15):
+    def __init__(self, num_sheep_total=30, num_sheep_neighbors=15, max_steps=1500):
 
         # radius for sheep to be considered as collected by dog
         self.dog_collect_radius = 2.0
@@ -69,16 +69,25 @@ class ShepherdSimulation:
         self.inertia = np.ones((self.num_sheep_total, 2))
 
         # initialize maximum number of steps
-        self.max_steps = 1500
+        self.max_steps = max_steps
+
+        # number of executed steps
+        self.counter = 0
+
+
+    def success_criteria(self):
+        """
+        Function to determine the success of the simulation (to be modified)
+        :return: Success or not
+        """
+        return np.linalg.norm(self.target - self.sheep_com) < 1.0
 
     # main function to perform simulation
-    def run(self, render=False):
+    def run(self, render=False, verbose=False):
 
         # start the simulation
-        print('Start simulation')
-
-        # initialize counter for plotting
-        counter = 0
+        if verbose:
+            print('Start simulation')
 
         # initialize matplotlib figure
         if render:
@@ -87,9 +96,9 @@ class ShepherdSimulation:
             plt.show()
 
         # main loop for simulation
-        while np.linalg.norm(self.target - self.sheep_com) > 1.0 and counter < self.max_steps:
+        while not self.success_criteria() and self.counter < self.max_steps:
             # update counter variable
-            counter += 1
+            self.counter += 1
 
             # get the new dog position
             # self.dog_heuristic_model()
@@ -99,7 +108,7 @@ class ShepherdSimulation:
             self.update_environment()
 
             # plot every 5th frame
-            if counter % 5 == 0 and render:
+            if self.counter % 5 == 0 and render:
                 plt.clf()
 
                 plt.scatter(self.target[0], self.target[1],
@@ -117,8 +126,13 @@ class ShepherdSimulation:
                 plt.draw()
                 plt.pause(0.01)
 
+        success = False
+        if self.success_criteria():
+            success = True
         # complete execution
-        print('Finish simulation')
+        if verbose:
+            print('Finish simulation')
+        return self.counter, success
 
     # function to find new inertia for sheep
     def update_environment(self):
