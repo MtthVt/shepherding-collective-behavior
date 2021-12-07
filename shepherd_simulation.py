@@ -8,6 +8,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import warnings
+from simpful import *
+from fuzzy_dog import get_fuzzy_system
 
 # suppress runtime warnings
 warnings.filterwarnings("ignore")
@@ -102,7 +104,8 @@ class ShepherdSimulation:
 
             # get the new dog position
             # self.dog_heuristic_model()
-            self.dog_strombom_model()
+            #self.dog_strombom_model()
+            self.dog_fuzzy_model(verbose=verbose)
 
             # find new inertia
             self.update_environment()
@@ -290,6 +293,81 @@ class ShepherdSimulation:
 
         # update position
         self.dog_pose = self.dog_pose + self.dog_speed * direction + self.noise_term*noise
+
+    def dog_fuzzy_model(self, verbose= False):
+        """
+        Dog decides between driving and collecting using Fuzzy Logic
+        :return:
+        """
+        # decision parameter
+        alpha = 0.3
+        FS = get_fuzzy_system(self.counter, num_sheep_total=self.num_sheep_total)
+        FS.set_variable("Time", self.counter)
+
+        # number of sheep in field
+        field = self.sheep_repulsion_dist * (self.num_sheep_total ** (2 / 3))
+        dist_to_com = np.linalg.norm(
+            (self.sheep_poses - self.sheep_com[None, :]), axis=1)
+
+        field_size = (dist_to_com < field).sum()
+        FS.set_variable("Quantity", field_size)
+
+        # distance to the target
+        dist = np.linalg.norm(self.target - self.sheep_com)
+        FS.set_variable("Distance", dist)
+
+        driving = False
+        crisp_decision_value = FS.Mamdani_inference(['Decision'])['Decision']
+        if crisp_decision_value< alpha:
+            driving = True
+
+        if verbose:
+            print(f"Decision: {crisp_decision_value}, {driving}")
+
+        # determine the dog position
+        if driving:
+            # perform driving
+
+            # compute driving Point
+            direction = self.sheep_com - self.target
+            direction /= np.linalg.norm(direction)
+
+            factor = self.sheep_repulsion_dist * \
+                     (np.sqrt(self.num_sheep_total))
+
+            # get intermediate collecting goal; P_d
+            int_goal = self.sheep_com + (direction * factor)
+
+        else:
+            # perform collecting
+
+            # get the farthest sheep
+            dist_to_com = np.linalg.norm(
+                (self.sheep_poses - self.sheep_com[None, :]), axis=1)
+            farthest_sheep = self.sheep_poses[np.argmax(dist_to_com), :]
+
+            # compute the direction
+            direction = (farthest_sheep - self.sheep_com)
+            direction /= np.linalg.norm(direction)
+
+            # compute the distance factor
+            factor = self.sheep_repulsion_dist
+
+            # get intermediate collecting goal; P_c
+            int_goal = farthest_sheep + (direction * factor)
+
+        # compute increments in x,y components
+        direction = int_goal - self.dog_pose
+        direction /= np.linalg.norm(direction)
+
+        # error term
+        noise = np.random.randn(2)
+        noise /= np.linalg.norm(noise, keepdims=True)
+
+        # update position
+        self.dog_pose = self.dog_pose + self.dog_speed * direction + self.noise_term * noise
+
+
 
 
 
