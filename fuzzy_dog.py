@@ -11,7 +11,7 @@ def get_fuzzy_system(t, t_min= 5, t_max= 8000, num_sheep_total= 30):
     :param num_sheep_total: total number of sheep
     :return: Fuzzy System
     """
-    FS = FuzzySystem()
+    FS = FuzzySystem(verbose=False, show_banner=False)
     # Define fuzzy sets and linguistic variables
     T_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=t_min, d=0.3 * t_max), term="small")
     T_2 = FuzzySet(function=Triangular_MF(a=t_min, b=0.3 * t_max, c=0.5 * t_max), term="medium")
@@ -20,8 +20,8 @@ def get_fuzzy_system(t, t_min= 5, t_max= 8000, num_sheep_total= 30):
 
     FS.add_linguistic_variable("Time", LinguisticVariable([T_1, T_2, T_3, T_4], concept="Elapsed time",
                                                           universe_of_discourse=[0, t_max + 5]))
-
-    q_min = 5
+    # Minimum number of sheep to be collected
+    q_min = 0.5*num_sheep_total
     # capacity of the robot (probably not applicable to dog)
     c_n = num_sheep_total
     D_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=q_min, d=0.5 * c_n), term="small")

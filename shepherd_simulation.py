@@ -301,7 +301,8 @@ class ShepherdSimulation:
         """
         # decision parameter
         alpha = 0.3
-        FS = get_fuzzy_system(self.counter, num_sheep_total=self.num_sheep_total)
+        t_min = np.linalg.norm(self.target - self.dog_pose)
+        FS = get_fuzzy_system(self.counter, t_min=t_min, num_sheep_total=self.num_sheep_total)
         FS.set_variable("Time", self.counter)
 
         # number of sheep in field
@@ -318,10 +319,15 @@ class ShepherdSimulation:
 
         driving = False
         crisp_decision_value = FS.Mamdani_inference(['Decision'])['Decision']
-        if crisp_decision_value< alpha:
+        if crisp_decision_value < alpha:
             driving = True
 
         if verbose:
+            # plot membership functions
+            FS.plot_variable("Time")
+            FS.plot_variable("Quantity")
+            FS.plot_variable("Distance")
+            FS.plot_variable("Decision")
             print(f"Decision: {crisp_decision_value}, {driving}")
 
         # determine the dog position
