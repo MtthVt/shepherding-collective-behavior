@@ -69,7 +69,7 @@ class ShepherdSimulation:
         self.inertia = np.ones((self.num_sheep_total, 2))
 
         # initialize maximum number of steps
-        self.max_steps = 1500
+        self.max_steps = 1000
 
         # field threshold params (for driving/collecting decision)
         self.thresh_alpha = 1
