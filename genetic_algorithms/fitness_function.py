@@ -1,5 +1,5 @@
 import numpy as np
-from genetic_algorithms.shepherd_simulation import ShepherdSimulation
+from shepherd_simulation import ShepherdSimulation
 
 STEP_BETWEEN_SIMULATIONS_FOR_N_AND_n = 16
 
@@ -47,4 +47,5 @@ def fitness_func(solution, solution_idx):
     # score calculation - to be specified
     total_score = np.sum(scores)
     print('Total score', 1 / total_score)
+    print(solution)
     return 1 / total_score
