@@ -1,15 +1,17 @@
 """Main file with functions required for performing genetic algorithm parameters exploration
 """
+import numpy as np
 import pygad
 from os.path import isfile
 import pandas as pd
 import time
+from datetime import datetime
 from genetic_algorithms.fitness_function import fitness_func
 
-def create_log(alphas=(), betas=(), gamas=(), fitnesses=(), indices=(), generation=0, timestamp=time.time()):
+def create_log(alphas=(), betas=(), gammas=(), fitnesses=(), indices=(), generation=0, timestamp=time.time()):
     df = pd.DataFrame({'alpha': alphas,
                       'beta': betas,
-                      'gama': gamas,
+                      'gamma': gammas,
                       'fitness': fitnesses,
                       'index': indices,
                       })
@@ -22,7 +24,7 @@ def on_generation(ga):
     global filepath
     global last_fitness
 
-    alphas, betas, gamas = ga.population.T
+    alphas, betas, gammas = ga.population.T
     fitness = ga.last_generation_fitness
     indices = list(range(len(fitness)))
     generation = ga.generations_completed
@@ -32,20 +34,20 @@ def on_generation(ga):
         old_logs = pd.read_pickle(filepath)
     else:
         old_logs = create_log()
-    new_logs = pd.concat([old_logs, create_log(alphas,betas,gamas, fitness,indices,generation,timestamp)])
+    new_logs = pd.concat([old_logs, create_log(alphas,betas,gammas, fitness,indices,generation,timestamp)])
     pd.to_pickle(new_logs,filepath)
 
     print(f'Generation {ga.generations_completed} was completed')
-    actual_fitness = max(fitness)
-    print(f'Best solution was {actual_fitness}')
-    print(f'The change was {actual_fitness - last_fitness}')
-    last_fitness = actual_fitness
+    idx_best = np.argmax(fitness, axis=0)
+    print(f'Best solution was {fitness[idx_best]} with parameters {ga.population[idx_best]}')
+    print(f'The change was {fitness[idx_best] - last_fitness}')
+    last_fitness = fitness[idx_best]
 
 
 if __name__ == '__main__':
 
     last_fitness = 0
-    filename = 'basic_ga ' + str(time.time()) + '.pkl'
+    filename = 'basic_ga_ ' + datetime.now().strftime('%Y.%m.%d.%H.%M') + '.pkl'
     filepath = f'results/{filename}'
 
     num_generations = 100

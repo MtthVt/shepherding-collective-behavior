@@ -44,8 +44,6 @@ def fitness_func(solution, solution_idx):
             sc = fitness_func_single_sim(solution, N, n, sim_count)
             scores.append(sc)
 
-    # score calculation - to be specified
+    # score calculation
     total_score = np.sum(scores)
-    print('Total score', 1 / total_score)
-    print(solution)
     return 1 / total_score
