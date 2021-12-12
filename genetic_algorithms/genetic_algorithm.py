@@ -1,13 +1,13 @@
 """Main file with functions required for performing genetic algorithm parameters exploration
 """
-import numpy as np
-from os.path import isfile
-import pandas as pd
 import time
+from os.path import isfile
 from datetime import datetime
 from multiprocessing import Pool, cpu_count
 from fitness_function import fitness_func
 from pooled_ga import PooledGA
+import numpy as np
+import pandas as pd
 
 
 def create_log(alphas=(), betas=(), gammas=(), fitnesses=(), indices=(), generation=0, timestamp=time.time()):
@@ -36,12 +36,14 @@ def on_generation(ga):
         old_logs = pd.read_pickle(filepath)
     else:
         old_logs = create_log()
-    new_logs = pd.concat([old_logs, create_log(alphas, betas, gammas, fitness, indices, generation, timestamp)])
+    new_logs = pd.concat([old_logs, create_log(
+        alphas, betas, gammas, fitness, indices, generation, timestamp)])
     pd.to_pickle(new_logs, filepath)
 
     print(f'Generation {ga.generations_completed} was completed')
     idx_best = np.argmax(fitness, axis=0)
-    print(f'Best solution was {fitness[idx_best]} with parameters {ga.population[idx_best]}')
+    print(
+        f'Best solution was {fitness[idx_best]} with parameters {ga.population[idx_best]}')
     print(f'The change was {fitness[idx_best] - last_fitness}')
     last_fitness = fitness[idx_best]
 
@@ -61,7 +63,8 @@ if __name__ == '__main__':
     parent_selection_type = "rws"
     crossover_type = "uniform"
     mutation_by_replacement = False
-    gen_space = [{"low": 0, 'high': 10}, {"low": 0, "high": 4}, {"low": -100, "high": 100}]
+    gen_space = [{"low": 0, 'high': 10}, {
+        "low": 0, "high": 4}, {"low": -100, "high": 100}]
 
     with Pool(processes=cpu_num) as pool:
         ga_instance = PooledGA(pool,
