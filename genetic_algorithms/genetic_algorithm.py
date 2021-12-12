@@ -4,7 +4,8 @@ import time
 from os.path import isfile
 from datetime import datetime
 from multiprocessing import Pool, cpu_count
-from fitness_function import fitness_func
+from timeit import default_timer as timer
+from fitness_function import fitness_func, STEP_BETWEEN_SIMULATIONS_FOR_N_AND_n
 from pooled_ga import PooledGA
 import numpy as np
 import pandas as pd
@@ -25,6 +26,7 @@ def create_log(alphas=(), betas=(), gammas=(), fitnesses=(), indices=(), generat
 def on_generation(ga):
     global filepath
     global last_fitness
+    global last_timer
 
     alphas, betas, gammas = ga.population.T
     fitness = ga.last_generation_fitness
@@ -40,7 +42,9 @@ def on_generation(ga):
         alphas, betas, gammas, fitness, indices, generation, timestamp)])
     pd.to_pickle(new_logs, filepath)
 
-    print(f'Generation {ga.generations_completed} was completed')
+    elapsed = round(timer() - last_timer, 2)
+    last_timer = timer()
+    print(f'Generation {ga.generations_completed} was completed in {elapsed}s')
     idx_best = np.argmax(fitness, axis=0)
     print(
         f'Best solution was {fitness[idx_best]} with parameters {ga.population[idx_best]}')
@@ -53,7 +57,9 @@ if __name__ == '__main__':
     print('{} CPUs available - creating {} pool processes'.format(cpu_num, cpu_num))
 
     last_fitness = 0
-    filename = 'basic_ga_ ' + datetime.now().strftime('%Y.%m.%d.%H.%M') + '.pkl'
+    last_timer = timer()
+    filename = f'basic_ga.step_{STEP_BETWEEN_SIMULATIONS_FOR_N_AND_n}.' + \
+        datetime.now().strftime('%Y.%m.%d.%H.%M') + '.pkl'
     filepath = f'results/{filename}'
 
     num_generations = 100
