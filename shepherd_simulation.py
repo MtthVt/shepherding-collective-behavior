@@ -312,8 +312,9 @@ class ShepherdSimulation:
 
         # decision parameter
         alpha = 0.3
-        t_min = np.linalg.norm(self.target - self.dog_pose)
-        FS = get_fuzzy_system(self.counter, t_min=t_min, num_sheep_total=self.num_sheep_total)
+        t_min = np.linalg.norm(self.target - self.dog_pose)/self.dog_speed
+        critical_distance = (self.max_steps - self.counter)*self.dog_speed
+        FS = get_fuzzy_system(self.counter, t_min, self.max_steps, self.num_sheep_total, critical_distance)
         FS.set_variable("Time", self.counter)
 
         # number of sheep in field
@@ -339,7 +340,8 @@ class ShepherdSimulation:
             FS.plot_variable("Quantity")
             FS.plot_variable("Distance")
             FS.plot_variable("Decision")
-            print(f"Decision: {crisp_decision_value}, {driving}")
+
+        print(f"Decision: {crisp_decision_value}, {driving}")
 
         # determine the dog position
         if driving:
