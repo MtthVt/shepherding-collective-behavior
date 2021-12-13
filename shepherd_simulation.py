@@ -5,11 +5,15 @@
    Based on: https://github.com/buntyke/shepherd_gym
 """
 
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import warnings
 from simpful import *
 from fuzzy_dog import get_fuzzy_system
+
+# Following line is needed to get an updated graphic plot of the env.
+matplotlib.use("TkAgg")
 
 # suppress runtime warnings
 warnings.filterwarnings("ignore")
