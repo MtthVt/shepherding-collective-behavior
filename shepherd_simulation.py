@@ -118,22 +118,7 @@ class ShepherdSimulation:
 
             # plot every 5th frame
             if self.counter % 5 == 0 and render:
-                plt.clf()
-
-                plt.scatter(self.target[0], self.target[1],
-                            c='g', s=40, label='Goal')
-                plt.scatter(
-                    self.dog_pose[0], self.dog_pose[1], c='r', s=50, label='Dog')
-                plt.scatter(
-                    self.sheep_poses[:, 0], self.sheep_poses[:, 1], c='b', s=50, label='Sheep')
-
-                plt.title('Shepherding')
-                border = 20
-                plt.xlim([0 - border, self.field_length + border])
-                plt.ylim([0 - border, self.field_length + border])
-                plt.legend()
-                plt.draw()
-                plt.pause(0.01)
+                self.plot_env()
 
         success = False
         if self.success_criteria():
@@ -142,6 +127,23 @@ class ShepherdSimulation:
         if verbose:
             print('Finish simulation')
         return self.counter, success
+
+    def plot_env(self):
+        plt.clf()
+        plt.scatter(self.target[0], self.target[1],
+                    c='g', s=40, label='Goal')
+        plt.scatter(
+            self.dog_pose[0], self.dog_pose[1], c='r', s=50, label='Dog')
+        plt.scatter(
+            self.sheep_poses[:, 0], self.sheep_poses[:, 1], c='b', s=50, label='Sheep')
+
+        plt.title('Shepherding')
+        border = 20
+        plt.xlim([0 - border, self.field_length + border])
+        plt.ylim([0 - border, self.field_length + border])
+        plt.legend()
+        plt.draw()
+        plt.pause(0.01)
 
     # function to find new inertia for sheep
     def update_environment(self):
