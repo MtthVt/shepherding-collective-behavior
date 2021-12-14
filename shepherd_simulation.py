@@ -5,11 +5,12 @@
    Based on: https://github.com/buntyke/shepherd_gym
 """
 
+import warnings
+
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-import warnings
-from simpful import *
+
 from fuzzy_dog import get_fuzzy_system
 
 # Following line is needed to get an updated graphic plot of the env.
@@ -17,6 +18,7 @@ matplotlib.use("TkAgg")
 
 # suppress runtime warnings
 warnings.filterwarnings("ignore")
+
 
 # class implementation of shepherding
 
@@ -81,7 +83,6 @@ class ShepherdSimulation:
 
         # number of executed steps
         self.counter = 0
-
 
     def success_criteria(self):
         """
@@ -182,8 +183,8 @@ class ShepherdSimulation:
 
         # compute a distance matrix
         distance_matrix = np.sqrt(-2 * np.dot(self.sheep_poses[indices, :], self.sheep_poses[indices, :].T)
-                                  + np.sum(self.sheep_poses[indices, :] ** 2, axis=1) + np.sum(self.sheep_poses[indices, :] ** 2, axis=1)[:,
-                                                                                                                                          np.newaxis])
+                                  + np.sum(self.sheep_poses[indices, :] ** 2, axis=1)
+                                  + np.sum(self.sheep_poses[indices, :] ** 2, axis=1)[:, np.newaxis])
 
         # find the sheep which are within sheep repulsion distance between each other
         xvals, yvals = np.where(
@@ -196,8 +197,7 @@ class ShepherdSimulation:
 
         for val in range(num_near_sheep):
             iv = interact[interact[:, 0] == val, 1]
-            transit = self.sheep_poses[val, :][None,
-                                               :] - self.sheep_poses[iv, :]
+            transit = self.sheep_poses[val, :][None, :] - self.sheep_poses[iv, :]
             transit /= np.linalg.norm(transit, axis=1, keepdims=True)
             repulsion_sheep[val, :] = np.sum(transit, axis=0)
 
@@ -211,8 +211,7 @@ class ShepherdSimulation:
         repulsion_dog[np.isnan(repulsion_dog)] = 0
 
         # attraction to LCMs
-        sheep_neighbors = np.argsort(distance_matrix, axis=1)[
-            :, 0:self.num_sheep_neighbors + 1]
+        sheep_neighbors = np.argsort(distance_matrix, axis=1)[:, 0:self.num_sheep_neighbors + 1]
         sheep_lcms = np.zeros((num_near_sheep, 2))
 
         for i in range(num_near_sheep):
@@ -229,8 +228,8 @@ class ShepherdSimulation:
 
         # compute sheep motion direction
         inertia_sheep_near_dog = self.inertia_term * inertia_sheep_near_dog + self.lcm_term * attraction_lcm + \
-            self.repulsion_sheep_term * repulsion_sheep + self.repulsion_dog_term * repulsion_dog + \
-            self.noise_term * noise
+                                 self.repulsion_sheep_term * repulsion_sheep + self.repulsion_dog_term * repulsion_dog + \
+                                 self.noise_term * noise
 
         # normalize the inertia terms
         inertia_sheep_near_dog /= np.linalg.norm(
@@ -268,7 +267,7 @@ class ShepherdSimulation:
             direction /= np.linalg.norm(direction)
 
             factor = self.sheep_repulsion_dist * \
-                (np.sqrt(self.num_sheep_total))
+                     (np.sqrt(self.num_sheep_total))
 
             # get intermediate collecting goal; P_d
             int_goal = self.sheep_com + (direction * factor)
@@ -300,9 +299,9 @@ class ShepherdSimulation:
         noise /= np.linalg.norm(noise, keepdims=True)
 
         # update position
-        self.dog_pose = self.dog_pose + self.dog_speed * direction + self.noise_term*noise
+        self.dog_pose = self.dog_pose + self.dog_speed * direction + self.noise_term * noise
 
-    def dog_fuzzy_model(self, verbose= False):
+    def dog_fuzzy_model(self, verbose=False):
         """
         Dog decides between driving and collecting using Fuzzy Logic
         :return:
@@ -344,7 +343,6 @@ class ShepherdSimulation:
             FS.plot_variable("Quantity")
             FS.plot_variable("Distance")
             FS.plot_variable("Decision")
-
         print(f"Decision: {crisp_decision_value}, {driving}")
 
         # determine the dog position
