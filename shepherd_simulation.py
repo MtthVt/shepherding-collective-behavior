@@ -64,6 +64,7 @@ class ShepherdSimulation:
         self.init_sheep_pose = np.random.uniform(
             0, self.field_length // 2, size=(self.num_sheep_total, 2)) + field_center
         self.sheep_poses = self.init_sheep_pose
+        self.vis_sheep_poses = self.sheep_poses
         self.sheep_com = self.sheep_poses.mean(axis=0)
 
         self.sheep_radius = 2
@@ -112,7 +113,8 @@ class ShepherdSimulation:
             # get the new dog position
             # self.dog_heuristic_model()
             # self.dog_strombom_model()
-            self.dog_fuzzy_model(verbose=verbose)
+            self.vis_sheep_poses = self.get_visible_sheep(self.sheep_poses, self.dog_pose, self.sheep_radius)
+            self.dog_fuzzy_model(self.vis_sheep_poses, verbose=verbose)
 
             # find new inertia
             self.update_environment()
@@ -135,9 +137,12 @@ class ShepherdSimulation:
                     c='g', s=40, label='Goal')
         plt.scatter(
             self.dog_pose[0], self.dog_pose[1], c='r', s=50, label='Dog')
+        vis_sheep = self.vis_sheep_poses
         plt.scatter(
-            self.sheep_poses[:, 0], self.sheep_poses[:, 1], c='b', s=50, label='Sheep')
-
+            vis_sheep[:, 0], vis_sheep[:, 1], c='g', s=50, label='Visible Sheep')
+        other_sheep = np.asarray([i for i in self.sheep_poses if i not in vis_sheep])
+        plt.scatter(
+            other_sheep[:, 0], other_sheep[:, 1], c='b', s=50, label='Not visible Sheep')
         plt.title('Shepherding')
         border = 20
         plt.xlim([0 - border, self.field_length + border])
@@ -301,27 +306,29 @@ class ShepherdSimulation:
         # update position
         self.dog_pose = self.dog_pose + self.dog_speed * direction + self.noise_term * noise
 
-    def dog_fuzzy_model(self, verbose=False):
+    def dog_fuzzy_model(self, sheep_poses, verbose=False):
         """
         Dog decides between driving and collecting using Fuzzy Logic
         :return:
         """
+        # Calculate sheep_com of visible sheeps
+        sheep_com = np.mean(sheep_poses, axis=0)
         # check if a sheep is closer than r_a to dog, if yes stop walking
         dist_sheep_dog = np.linalg.norm(
-            self.sheep_poses - self.dog_pose, axis=1)
+            sheep_poses - self.dog_pose, axis=1)
         if np.min(dist_sheep_dog) < 3 * self.sheep_repulsion_dist:
             self.dog_pose = self.dog_pose
             return
 
         # decision parameter
         # calculate distance to driving point
-        direction = self.sheep_com - self.target
+        direction = sheep_com - self.target
         direction /= np.linalg.norm(direction)
 
         factor = self.sheep_repulsion_dist * \
                  (np.sqrt(self.num_sheep_total))
 
-        P_d = self.sheep_com + (direction * factor)
+        P_d = sheep_com + (direction * factor)
         distance_P_d = np.linalg.norm(P_d - self.dog_pose)
 
         # calculate distance of initial sheep position to target
@@ -331,19 +338,19 @@ class ShepherdSimulation:
 
         # average distance of sheep to com
         dist_to_com = np.linalg.norm(
-            (self.sheep_poses - self.sheep_com[None, :]), axis=1)
+            (sheep_poses - sheep_com[None, :]), axis=1)
         avg_dist_to_com = np.mean(dist_to_com)
 
         FS = get_fuzzy_system(self.counter, t_min, self.max_steps, avg_dist_to_com, distance_P_d, initial_distance_target)
 
         # Distance of farthest sheep to center of mass
-        farthest_sheep = self.sheep_poses[np.argmax(dist_to_com), :]
-        dist_farthest_sheep_com = np.linalg.norm(farthest_sheep - self.sheep_com)
+        farthest_sheep = sheep_poses[np.argmax(dist_to_com), :]
+        dist_farthest_sheep_com = np.linalg.norm(farthest_sheep - sheep_com)
         FS.set_variable("Distance_runaway", dist_farthest_sheep_com)
 
         # Distance of dog to potential collecting point
         # compute the direction
-        direction = (farthest_sheep - self.sheep_com)
+        direction = (farthest_sheep - sheep_com)
         direction /= np.linalg.norm(direction)
         # compute the distance factor
         factor = self.sheep_repulsion_dist
@@ -353,7 +360,7 @@ class ShepherdSimulation:
         FS.set_variable("Distance_collecting_point", distance_dog_P_c)
 
         # distance to the final target
-        dist_final_target = np.linalg.norm(self.target - self.sheep_com)
+        dist_final_target = np.linalg.norm(self.target - sheep_com)
         FS.set_variable("Distance_final_target", dist_final_target)
 
         driving = False
