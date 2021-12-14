@@ -64,6 +64,8 @@ class ShepherdSimulation:
         self.sheep_poses = init_sheep_pose
         self.sheep_com = self.sheep_poses.mean(axis=0)
 
+        self.sheep_radius = 2
+
         # initialize dog position
         init_dog_pose = np.array([0, 0])
         self.dog_pose = init_dog_pose
@@ -386,8 +388,48 @@ class ShepherdSimulation:
         # update position
         self.dog_pose = self.dog_pose + self.dog_speed * direction + self.noise_term * noise
 
+    def get_visible_sheep(self, sheep_poses, dog_pose, sheep_radius):
+        """
+        Calculates the sheeps the dog can actually see
+        :return:
+        """
+        # 1. Remove sheeps which are not in the field of view of the dog
+        # sheep poses: self.sheep_poses
+        # dog pose: self.dog_pose [= np.array([0, 0])]
+        # TBD: need vector in a specific direction to compute it
+        # Vector3 toSc = sc.transform.position - dc.transform.position;
+        # float cos = Vector3.Dot(dc.transform.forward, toSc.normalized);
+        # return cos > Mathf.Cos((180f - blindAngle / 2f) * Mathf.Deg2Rad);
 
+        # 2. Remove sheep which are occluded by other sheep
+        # Calculate distance of sheep to dog
+        dist_sheep_dog = np.linalg.norm(
+            sheep_poses - dog_pose, axis=1)
+        # Sort sheep by their distances
+        sheep_pos_sorted = [x for _, x in sorted(zip(dist_sheep_dog, sheep_poses))]
 
+        # Iterate over every sheep, calculate the line between the sheep and the dog & save the line.
+        # In the next step, check if a sheep collides with the line
+        visible_sheep_positions = list()
+        for i in range(len(sheep_pos_sorted)):
+            sheep_pos = sheep_pos_sorted[i]
+            # Check if sheep collides with previous sheep
+            occluded = False
+            for vis_sheep_pos in visible_sheep_positions:
+                # distance between sheep and the line formed by the visible sheep and the dog
+                p1 = dog_pose
+                p2 = vis_sheep_pos
+                p3 = sheep_pos
+                distance = np.linalg.norm(np.cross(p2 - p1, p1 - p3)) / np.linalg.norm(p2 - p1)
+                # Check if the distance is smaller than the radius of one sheep
+                if distance < sheep_radius:
+                    occluded = True
+                    break
+            if occluded:
+                continue
+            # sheep is not occluded by other sheep, add to visible sheep list
+            visible_sheep_positions.append(sheep_pos)
+        return np.asarray(visible_sheep_positions)
 
 
 def main():
