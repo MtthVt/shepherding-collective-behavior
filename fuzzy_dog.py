@@ -14,9 +14,14 @@ def get_fuzzy_system(t, t_min, t_max, d_s, d_d, d_t):
     :return: Fuzzy System
     """
 
+    # Idea from professor: # Scientific approach: say what we found weired in Stromböm ( CoM) as target acquired,
+    # compare algorithm to Stromböm how it is, # and then step away from it and say what we did "better"
+
     FS = FuzzySystem(verbose=False, show_banner=False)
 
-    # distance from the farthest sheep to the com (if dog perceives sheep as near/far from herd depends on average distance to com)
+    # distance from the farthest sheep to the com (if dog perceives sheep as near/far from herd depends on average
+    # distance to com)
+
     D_s_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=d_s, d=1.5 * d_s), term="near")
     D_s_2 = FuzzySet(function=Trapezoidal_MF(a=d_s, b=1.5 * d_s, c=2 * d_s, d=3 * d_s), term="medium")
     D_s_3 = FuzzySet(function=Trapezoidal_MF(a=2.5 * d_s, b=3.5*d_s, c=5 * d_s, d=5 * d_s), term="far")
