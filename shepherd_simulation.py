@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from fuzzy_dog import get_fuzzy_system
+from helper import plot_driving_collecting_progress, plot_driving_collecting_bar
 
 # Following line is needed to get an updated graphic plot of the env.
 matplotlib.use("TkAgg")
@@ -84,6 +85,7 @@ class ShepherdSimulation:
 
         # number of executed steps
         self.counter = 0
+        self.driving_counter = [0]
 
     def success_criteria(self):
         """
@@ -129,6 +131,11 @@ class ShepherdSimulation:
         # complete execution
         if verbose:
             print('Finish simulation')
+
+        if render:
+            plot_driving_collecting_bar(self.driving_counter)
+            plot_driving_collecting_progress(self.driving_counter)
+
         return self.counter, success
 
     def plot_env(self):
@@ -277,6 +284,8 @@ class ShepherdSimulation:
             # get intermediate collecting goal; P_d
             int_goal = self.sheep_com + (direction * factor)
 
+            self.driving_counter.append(self.driving_counter[-1] + 1)
+
         else:
             # perform collecting
 
@@ -294,6 +303,8 @@ class ShepherdSimulation:
 
             # get intermediate collecting goal; P_c
             int_goal = farthest_sheep + (direction * factor)
+
+            self.driving_counter.append(self.driving_counter[-1])
 
         # compute increments in x,y components
         direction = int_goal - self.dog_pose
@@ -382,11 +393,13 @@ class ShepherdSimulation:
             # perform driving
             # get intermediate collecting goal; P_d
             int_goal = P_d
+            self.driving_counter.append(self.driving_counter[-1]+1)
 
         else:
             # perform collecting
             # get intermediate collecting goal; P_c
             int_goal = P_c
+            self.driving_counter.append(self.driving_counter[-1]+1)
 
         # compute increments in x,y components
         direction = int_goal - self.dog_pose
