@@ -138,11 +138,11 @@ class ShepherdSimulation:
         plt.scatter(
             self.dog_pose[0], self.dog_pose[1], c='r', s=50, label='Dog')
         vis_sheep = self.vis_sheep_poses
-        plt.scatter(
-            vis_sheep[:, 0], vis_sheep[:, 1], c='g', s=50, label='Visible Sheep')
         other_sheep = np.asarray([i for i in self.sheep_poses if i not in vis_sheep])
         plt.scatter(
             other_sheep[:, 0], other_sheep[:, 1], c='b', s=50, label='Not visible Sheep')
+        plt.scatter(
+            vis_sheep[:, 0], vis_sheep[:, 1], c='g', s=50, label='Visible Sheep')
         plt.title('Shepherding')
         border = 20
         plt.xlim([0 - border, self.field_length + border])
@@ -375,7 +375,7 @@ class ShepherdSimulation:
             FS.plot_variable("Quantity")
             FS.plot_variable("Distance")
             FS.plot_variable("Decision")
-        print(f"Decision: {crisp_decision_value}, {driving}")
+            print(f"Decision: {crisp_decision_value}, {driving}")
 
         # determine the dog position
         if driving:
