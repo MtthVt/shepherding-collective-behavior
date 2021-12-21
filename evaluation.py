@@ -6,9 +6,11 @@ import numpy as np
 from shepherd_simulation import ShepherdSimulation
 
 no_timesteps = 8000
-max_no_neighbours = 6
+max_no_neighbours = 8
 no_sims_per_combination = 50
 verbose = True
+save_int_results = True
+int_results_folder = "chckpoints"
 
 
 def _sim_with_neighbours(N):
@@ -33,6 +35,10 @@ def _sim_with_neighbours(N):
         result[n - 1] = avg_success
     if verbose:
         print("Finished evaluation for " + str(N) + " neighbours")
+    if save_int_results:
+        f = open(int_results_folder + "/result_" + str(N) + ".txt",  "a")
+        f.write(str(result))
+        f.close()
     return {N: result}
 
 
