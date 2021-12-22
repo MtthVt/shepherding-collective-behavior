@@ -110,9 +110,9 @@ def plot_results(results, out_fig_fname=None):
 
     # Modify the x and y axis to represent the correct amount of neighbors
     res_max_no_neighbours = results.shape[0]
-    ind = np.arange(res_max_no_neighbours - 2 + 1)
+    ind = np.arange(res_max_no_neighbours)
     x_labels = [str(N) for N in range(2, res_max_no_neighbours + 1)]
-    y_labels = [str(n) for n in range(1, res_max_no_neighbours)]
+    y_labels = [str(n) for n in range(1, res_max_no_neighbours + 1)]
     plt.xticks(ind, labels=x_labels)
     plt.yticks(ind, labels=y_labels)
 
@@ -134,4 +134,4 @@ if __name__ == '__main__':
     print("Start evaluation")
     results = evaluate_paper()
     print(results)
-    plot_results(results, result_fig_file)
+    plot_results(results[1:, 1:].T, result_fig_file)
