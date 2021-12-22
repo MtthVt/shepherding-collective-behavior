@@ -7,7 +7,7 @@ from shepherd_simulation import ShepherdSimulation
 from datetime import datetime
 
 no_timesteps = 8000
-max_no_neighbours = 3
+max_no_neighbours = 140
 no_sims_per_combination = 50
 verbose = True
 save_int_results = True
