@@ -1,7 +1,7 @@
 import numpy as np
 from shepherd_simulation import ShepherdSimulation
 
-STEP_BETWEEN_SIMULATIONS_FOR_N_AND_n = 16
+STEP_BETWEEN_SIMULATIONS_FOR_N_AND_n = 4
 
 
 def simulation_count():
@@ -21,7 +21,7 @@ def fitness_func_single_sim(solution, num_sheep_total, num_sheep_neighbors, sim_
         num_sheep_total=num_sheep_total, num_sheep_neighbors=num_sheep_neighbors)
     sim.set_thresh_field_params(*solution)
 
-    t_steps, sheep_poses = sim.run()
+    t_steps, success, sheep_poses = sim.run()
 
     target = sim.target
     sheep_target_dists = np.linalg.norm(sheep_poses - target, axis=1)
