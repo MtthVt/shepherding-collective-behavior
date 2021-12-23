@@ -8,16 +8,22 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import warnings
+from utils import get_degree_between_3_points
 
 # suppress runtime warnings
 warnings.filterwarnings("ignore")
 
+
 # class implementation of shepherding
+
+class Decision_type:
+    SIGMOID = "sigmoid"
+    DEFAULT_STROMBOM = "default_strombom"
 
 
 class ShepherdSimulation:
 
-    def __init__(self, num_sheep_total=30, num_sheep_neighbors=15):
+    def __init__(self, num_sheep_total=30, num_sheep_neighbors=15, decision_type=Decision_type.DEFAULT_STROMBOM):
 
         # radius for sheep to be considered as collected by dog
         self.dog_collect_radius = 2.0
@@ -71,10 +77,18 @@ class ShepherdSimulation:
         # initialize maximum number of steps
         self.max_steps = 1000
 
-        # field threshold params (for driving/collecting decision)
+        self.decision_type = decision_type
+        # field threshold params (for driving/collecting decision) for default strombom decision
         self.thresh_alpha = 1
         self.thresh_beta = 2 / 3
         self.thresh_gamma = 0
+
+        # field threshold params (for driving/collecting decision) for sigmoid decision decision
+        self.thresh_N = 0
+        self.thresh_n = 0
+        self.thresh_furthest = 0
+        self.thresh_variance = 0
+        self.thresh_angle = 0
 
     # main function to perform simulation
     def run(self, render=False, verbose=False):
@@ -151,7 +165,7 @@ class ShepherdSimulation:
         # compute random movements while grazing (with prob self.grazing_prob)
         inertia_sheep_far_dog = np.zeros(inertia_sheep_far_dog.shape)
         moving_sheep = np.random.choice([True, False], num_far_sheep, p=[
-                                        self.grazing_prob, 1 - self.grazing_prob])
+            self.grazing_prob, 1 - self.grazing_prob])
         inertia_sheep_far_dog[moving_sheep, :] = np.random.randn(
             inertia_sheep_far_dog[moving_sheep, :].shape[0], 2)
         inertia_sheep_far_dog[moving_sheep, :] = np.linalg.norm(inertia_sheep_far_dog[moving_sheep, :], axis=1,
@@ -165,8 +179,9 @@ class ShepherdSimulation:
 
         # compute a distance matrix
         distance_matrix = np.sqrt(-2 * np.dot(self.sheep_poses[indices, :], self.sheep_poses[indices, :].T)
-                                  + np.sum(self.sheep_poses[indices, :] ** 2, axis=1) + np.sum(self.sheep_poses[indices, :] ** 2, axis=1)[:,
-                                                                                                                                          np.newaxis])
+                                  + np.sum(self.sheep_poses[indices, :] ** 2, axis=1) + np.sum(
+            self.sheep_poses[indices, :] ** 2, axis=1)[:,
+                                                                                        np.newaxis])
 
         # find the sheep which are within sheep repulsion distance between each other
         xvals, yvals = np.where(
@@ -180,7 +195,7 @@ class ShepherdSimulation:
         for val in range(num_near_sheep):
             iv = interact[interact[:, 0] == val, 1]
             transit = self.sheep_poses[val, :][None,
-                                               :] - self.sheep_poses[iv, :]
+                      :] - self.sheep_poses[iv, :]
             transit /= np.linalg.norm(transit, axis=1, keepdims=True)
             repulsion_sheep[val, :] = np.sum(transit, axis=0)
 
@@ -195,7 +210,7 @@ class ShepherdSimulation:
 
         # attraction to LCMs
         sheep_neighbors = np.argsort(distance_matrix, axis=1)[
-            :, 0:self.num_sheep_neighbors + 1]
+                          :, 0:self.num_sheep_neighbors + 1]
         sheep_lcms = np.zeros((num_near_sheep, 2))
 
         for i in range(num_near_sheep):
@@ -212,8 +227,8 @@ class ShepherdSimulation:
 
         # compute sheep motion direction
         inertia_sheep_near_dog = self.inertia_term * inertia_sheep_near_dog + self.lcm_term * attraction_lcm + \
-            self.repulsion_sheep_term * repulsion_sheep + self.repulsion_dog_term * repulsion_dog + \
-            self.noise_term * noise
+                                 self.repulsion_sheep_term * repulsion_sheep + self.repulsion_dog_term * repulsion_dog + \
+                                 self.noise_term * noise
 
         # normalize the inertia terms
         inertia_sheep_near_dog /= np.linalg.norm(
@@ -233,18 +248,8 @@ class ShepherdSimulation:
             self.dog_pose = self.dog_pose
             return
 
-        # check if sheep are within field
-        field = self.thresh_alpha * self.sheep_repulsion_dist * \
-            (self.num_sheep_total ** self.thresh_beta) + self.thresh_gamma
-        dist_to_com = np.linalg.norm(
-            (self.sheep_poses - self.sheep_com[None, :]), axis=1)
-
-        is_within_field = False
-        if np.max(dist_to_com) < field:
-            is_within_field = True
-
         # determine the dog position
-        if is_within_field:
+        if self.__decision_fuction() == 0:
             # perform herding
 
             # compute driving Point
@@ -252,12 +257,12 @@ class ShepherdSimulation:
             direction /= np.linalg.norm(direction)
 
             factor = self.sheep_repulsion_dist * \
-                (np.sqrt(self.num_sheep_total))
+                     (np.sqrt(self.num_sheep_total))
 
             # get intermediate collecting goal; P_d
             int_goal = self.sheep_com + (direction * factor)
 
-        else:
+        else:  # decision function return 1
             # perform collecting
 
             # get the farthest sheep
@@ -290,17 +295,84 @@ class ShepherdSimulation:
         # ToDo: add noise
         self.dog_pose = self.dog_pose + self.dog_speed * direction
 
+    def __decision_func_default_strombom(self):
+        # check if sheep are within field
+        field = self.thresh_alpha * self.sheep_repulsion_dist * \
+                (self.num_sheep_total ** self.thresh_beta) + self.thresh_gamma
+        dist_to_com = np.linalg.norm(
+            (self.sheep_poses - self.sheep_com[None, :]), axis=1)
+
+        if np.max(dist_to_com) < field:
+            return 0
+        else:
+            return 1
+
+    def __decision_func_sigmoid(self):
+
+        # get position of furthest sheep
+        dist_to_com = np.linalg.norm(
+            (self.sheep_poses - self.sheep_com[None, :]), axis=1)
+        farthest_sheep = self.sheep_poses[np.argmax(dist_to_com), :]
+
+        distance_to_furthest_sheep = np.linalg.norm(farthest_sheep - self.dog_pose)
+
+        driving_point = self.sheep_com
+
+        collecting_point = farthest_sheep
+
+        # angle between driving point, shepherd, collecting point
+        angle = get_degree_between_3_points(driving_point, self.dog_pose, collecting_point)
+
+        variance = np.var(dist_to_com)
+
+        # params must be normalize
+        # TODO: better than fixed normalized value
+        norm_N = self.num_sheep_total / 140
+        norm_n = self.num_sheep_neighbors / self.num_sheep_total
+        norm_angle = angle / 180
+        norm_dist_to_fur_sheep = distance_to_furthest_sheep / 150 if distance_to_furthest_sheep / 150 < 1 else 1
+        norm_variance = variance / 200 if variance / 200 < 1 else 1
+
+
+        g = self.thresh_N * norm_N + self.thresh_n * norm_n + self.thresh_variance * norm_variance + self.thresh_furthest * norm_dist_to_fur_sheep + self.thresh_angle * norm_angle
+        sigmoid = 1 / (1 + np.exp(-g))
+
+        if sigmoid <= 0.5:
+            return 0
+        else:
+            return 1
+
+    def __decision_fuction(self):
+        if self.decision_type == Decision_type.DEFAULT_STROMBOM:
+            return self.__decision_func_default_strombom()
+        elif self.decision_type == Decision_type.SIGMOID:
+            return self.__decision_func_sigmoid()
+        else:
+            raise Exception("invalid decision type")
+
     # set parameters related to field threshold calculation (used for genetic algorithm)
-    def set_thresh_field_params(self, alpha, beta, gamma):
-        self.thresh_alpha = alpha
-        self.thresh_beta = beta
-        self.thresh_gamma = gamma
+    def set_thresh_field_params(self, decision_params):
+        if self.decision_type == Decision_type.DEFAULT_STROMBOM:
+            alpha, beta, gamma = decision_params
+            self.thresh_alpha = alpha
+            self.thresh_beta = beta
+            self.thresh_gamma = gamma
+
+        elif self.decision_type == Decision_type.SIGMOID:
+            thresh_N, thresh_n, thresh_furthest, thresh_variance, thresh_angle = decision_params
+            self.thresh_N = thresh_N
+            self.thresh_n = thresh_n
+            self.thresh_furthest = thresh_furthest
+            self.thresh_variance = thresh_variance
+            self.thresh_angle = thresh_angle
+        else:
+            raise Exception("decision type is not valid")
 
 
 def main():
     shepherd_sim = ShepherdSimulation(
-        num_sheep_total=30, num_sheep_neighbors=15)
-    shepherd_sim.run(render=True, verbose=False)
+        num_sheep_total=50, num_sheep_neighbors=50)
+    shepherd_sim.run(render=True, verbose=True)
 
 
 if __name__ == '__main__':
