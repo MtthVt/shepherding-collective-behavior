@@ -25,6 +25,9 @@ class ShepherdSimulation:
 
     def __init__(self, num_sheep_total=30, num_sheep_neighbors=15, decision_type=Decision_type.DEFAULT_STROMBOM):
 
+        #initialize random state
+        self.random_state = np.random.RandomState(num_sheep_total*num_sheep_neighbors)
+
         # radius for sheep to be considered as collected by dog
         self.dog_collect_radius = 2.0
 
@@ -59,7 +62,7 @@ class ShepherdSimulation:
         # initialize sheep positions
         field_center = np.array(
             [self.field_length // 2, self.field_length // 2])
-        init_sheep_pose = np.random.uniform(
+        init_sheep_pose = self.random_state.uniform(
             0, self.field_length // 2, size=(self.num_sheep_total, 2)) + field_center
         self.sheep_poses = init_sheep_pose
         self.sheep_com = self.sheep_poses.mean(axis=0)
@@ -89,6 +92,8 @@ class ShepherdSimulation:
         self.thresh_furthest = 0
         self.thresh_variance = 0
         self.thresh_angle = 0
+
+
 
     # main function to perform simulation
     def run(self, render=False, verbose=False):
@@ -164,9 +169,9 @@ class ShepherdSimulation:
 
         # compute random movements while grazing (with prob self.grazing_prob)
         inertia_sheep_far_dog = np.zeros(inertia_sheep_far_dog.shape)
-        moving_sheep = np.random.choice([True, False], num_far_sheep, p=[
+        moving_sheep = self.random_state.choice([True, False], num_far_sheep, p=[
             self.grazing_prob, 1 - self.grazing_prob])
-        inertia_sheep_far_dog[moving_sheep, :] = np.random.randn(
+        inertia_sheep_far_dog[moving_sheep, :] = self.random_state.randn(
             inertia_sheep_far_dog[moving_sheep, :].shape[0], 2)
         inertia_sheep_far_dog[moving_sheep, :] = np.linalg.norm(inertia_sheep_far_dog[moving_sheep, :], axis=1,
                                                                 keepdims=True)
@@ -222,7 +227,7 @@ class ShepherdSimulation:
         attraction_lcm[np.isnan(attraction_lcm)] = 0
 
         # error term
-        noise = np.random.randn(num_near_sheep, 2)
+        noise = self.random_state.randn(num_near_sheep, 2)
         noise /= np.linalg.norm(noise, axis=1, keepdims=True)
 
         # compute sheep motion direction
@@ -267,7 +272,7 @@ class ShepherdSimulation:
         inds_sheep_near_dog = dist_sheep_dog < self.dog_repulsion_dist
         inertia_sheep_near_dog = self.inertia[inds_sheep_near_dog, :]
         num_near_sheep = len(inertia_sheep_near_dog)
-        noise = np.random.randn(num_near_sheep, 2)
+        noise = self.random_state.randn(num_near_sheep, 2)
         noise /= np.linalg.norm(noise, axis=1, keepdims=True)
 
         # update position
