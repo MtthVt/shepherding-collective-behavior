@@ -252,33 +252,12 @@ class ShepherdSimulation:
         if self.__decision_fuction() == 0:
             # perform herding
 
-            # compute driving Point
-            direction = self.sheep_com - self.target
-            direction /= np.linalg.norm(direction)
-
-            factor = self.sheep_repulsion_dist * \
-                     (np.sqrt(self.num_sheep_total))
-
-            # get intermediate collecting goal; P_d
-            int_goal = self.sheep_com + (direction * factor)
+            int_goal = self.__get_driving_point()
 
         else:  # decision function return 1
             # perform collecting
 
-            # get the farthest sheep
-            dist_to_com = np.linalg.norm(
-                (self.sheep_poses - self.sheep_com[None, :]), axis=1)
-            farthest_sheep = self.sheep_poses[np.argmax(dist_to_com), :]
-
-            # compute the direction
-            direction = (farthest_sheep - self.sheep_com)
-            direction /= np.linalg.norm(direction)
-
-            # compute the distance factor
-            factor = self.sheep_repulsion_dist
-
-            # get intermediate collecting goal; P_c
-            int_goal = farthest_sheep + (direction * factor)
+            int_goal = self.__get_collecting_point()
 
         # compute increments in x,y components
         direction = int_goal - self.dog_pose
@@ -294,6 +273,38 @@ class ShepherdSimulation:
         # update position
         # ToDo: add noise
         self.dog_pose = self.dog_pose + self.dog_speed * direction
+
+    def __get_collecting_point(self):
+        # get the farthest sheep
+        dist_to_com = np.linalg.norm(
+            (self.sheep_poses - self.sheep_com[None, :]), axis=1)
+        farthest_sheep = self.sheep_poses[np.argmax(dist_to_com), :]
+
+        # compute the direction
+        direction = (farthest_sheep - self.sheep_com)
+        direction /= np.linalg.norm(direction)
+
+        # compute the distance factor
+        factor = self.sheep_repulsion_dist
+
+        # get intermediate collecting goal; P_c
+        int_goal = farthest_sheep + (direction * factor)
+        return int_goal
+
+    def __get_driving_point(self):
+        # perform herding
+
+        # compute driving Point
+        direction = self.sheep_com - self.target
+        direction /= np.linalg.norm(direction)
+
+        factor = self.sheep_repulsion_dist * \
+                 (np.sqrt(self.num_sheep_total))
+
+        # get intermediate collecting goal; P_d
+        int_goal = self.sheep_com + (direction * factor)
+        return int_goal
+
 
     def __decision_func_default_strombom(self):
         # check if sheep are within field
@@ -316,9 +327,9 @@ class ShepherdSimulation:
 
         distance_to_furthest_sheep = np.linalg.norm(farthest_sheep - self.dog_pose)
 
-        driving_point = self.sheep_com
+        driving_point = self.__get_driving_point()
 
-        collecting_point = farthest_sheep
+        collecting_point = self.__get_collecting_point()
 
         # angle between driving point, shepherd, collecting point
         angle = get_degree_between_3_points(driving_point, self.dog_pose, collecting_point)
