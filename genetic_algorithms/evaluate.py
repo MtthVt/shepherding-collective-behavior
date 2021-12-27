@@ -8,7 +8,7 @@ from shepherd_simulation import ShepherdSimulation
 from datetime import datetime
 
 no_timesteps = 8000
-max_no_neighbours = 140
+max_no_neighbours = 139
 no_sims_per_combination = 50
 verbose = True
 
@@ -111,10 +111,10 @@ def plot_results(results, out_fig_fname=None):
     # Modify the x and y axis to represent the correct amount of neighbors
     res_max_no_neighbours = results.shape[0]
     ind = np.arange(res_max_no_neighbours)
-    x_labels = [str(N) for N in range(2, res_max_no_neighbours + 1)]
+    x_labels = [str(N) for N in range(1, res_max_no_neighbours + 1)]
     y_labels = [str(n) for n in range(1, res_max_no_neighbours + 1)]
-    plt.xticks(ind, labels=x_labels)
-    plt.yticks(ind, labels=y_labels)
+    plt.xticks(ind[9::10], labels=x_labels[9::10])
+    plt.yticks(ind[9::10], labels=y_labels[9::10])
 
     # Annotate the axes
     # ax.set_title("My title")
