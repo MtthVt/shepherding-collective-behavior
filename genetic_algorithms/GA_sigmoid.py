@@ -5,16 +5,18 @@ from os.path import isfile
 from datetime import datetime
 from multiprocessing import Pool, cpu_count
 from timeit import default_timer as timer
-from fitness_function import fitness_func, STEP_BETWEEN_SIMULATIONS_FOR_N_AND_n
+from fitness_function import fitness_func_sigmoid, STEP_BETWEEN_SIMULATIONS_FOR_N_AND_n
 from pooled_ga import PooledGA
 import numpy as np
 import pandas as pd
 
 
-def create_log(alphas=(), betas=(), gammas=(), fitnesses=(), indices=(), generation=0, timestamp=time.time()):
-    df = pd.DataFrame({'alpha': alphas,
-                       'beta': betas,
-                       'gamma': gammas,
+def create_log(Ns=(), ns=(), distances_fur=(),variances=(),angles=(), fitnesses=(), indices=(), generation=0, timestamp=time.time()):
+    df = pd.DataFrame({'param_N': Ns,
+                       'param_n': ns,
+                       'param_fur': distances_fur,
+                       'param_var': variances,
+                       "param_angle": angles,
                        'fitness': fitnesses,
                        'index': indices,
                        })
@@ -24,11 +26,11 @@ def create_log(alphas=(), betas=(), gammas=(), fitnesses=(), indices=(), generat
 
 
 def on_generation(ga):
+    global last_timer
     global filepath
     global last_fitness
-    global last_timer
 
-    alphas, betas, gammas = ga.population.T
+    Ns, ns, distances_fur, variances, angles = ga.population.T
     fitness = ga.last_generation_fitness
     indices = list(range(len(fitness)))
     generation = ga.generations_completed
@@ -39,7 +41,7 @@ def on_generation(ga):
     else:
         old_logs = create_log()
     new_logs = pd.concat([old_logs, create_log(
-        alphas, betas, gammas, fitness, indices, generation, timestamp)])
+        Ns, ns, distances_fur, variances, angles, fitness, indices, generation, timestamp)])
     pd.to_pickle(new_logs, filepath)
 
     elapsed = round(timer() - last_timer, 2)
@@ -58,31 +60,28 @@ if __name__ == '__main__':
 
     last_fitness = 0
     last_timer = timer()
-    filename = f'basic_ga.step_{STEP_BETWEEN_SIMULATIONS_FOR_N_AND_n}.' + \
-        datetime.now().strftime('%Y.%m.%d.%H.%M') + '.pkl'
+    filename = f'basic_ga.step_{STEP_BETWEEN_SIMULATIONS_FOR_N_AND_n}.sigmoid' + \
+               datetime.now().strftime('%Y.%m.%d.%H.%M') + '.pkl'
     filepath = f'results/{filename}'
 
     num_generations = 100
     sol_per_pop = 25
     num_parents_mating = int(sol_per_pop * 0.5)
-    num_genes = 3
+    num_genes = 5
     parent_selection_type = "rws"
     crossover_type = "uniform"
     mutation_by_replacement = False
-    gen_space = [{"low": 0, 'high': 10}, {
-        "low": 0, "high": 4}, {"low": -100, "high": 100}]
 
     with Pool(processes=cpu_num) as pool:
         ga_instance = PooledGA(pool,
                                num_generations=num_generations,
                                num_parents_mating=num_parents_mating,
-                               fitness_func=fitness_func,
+                               fitness_func=fitness_func_sigmoid,
                                sol_per_pop=sol_per_pop,
                                num_genes=num_genes,
                                parent_selection_type=parent_selection_type,
                                crossover_type=crossover_type,
                                mutation_by_replacement=mutation_by_replacement,
-                               gene_space=gen_space,
                                on_generation=on_generation)
 
         ga_instance.run()
