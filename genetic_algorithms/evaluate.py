@@ -71,7 +71,7 @@ def evaluate_paper():
     """
 
     results = np.full((max_no_neighbours + 1, max_no_neighbours + 1), 0)
-
+    results = results.astype('float64')
     with open(result_file, 'wb') as f:
         np.save(f, results)
 
