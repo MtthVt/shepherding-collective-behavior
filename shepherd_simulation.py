@@ -92,7 +92,7 @@ class ShepherdSimulation:
         Function to determine the success of the simulation (to be modified)
         :return: Success or not
         """
-        return np.linalg.norm(self.target - self.sheep_com) < 1.0
+        return np.linalg.norm(self.target - self.sheep_com) < 5.0
 
     # main function to perform simulation
     def run(self, render=False, verbose=False):
@@ -115,11 +115,12 @@ class ShepherdSimulation:
             # get the new dog position
             # self.dog_heuristic_model()
             # self.dog_strombom_model()
-            self.vis_sheep_poses = self.get_visible_sheep(self.sheep_poses, self.dog_pose, self.sheep_radius)
             self.dog_fuzzy_model(self.vis_sheep_poses, verbose=verbose)
 
             # find new inertia
             self.update_environment()
+            # Update the list of visible sheep
+            self.vis_sheep_poses = self.get_visible_sheep(self.sheep_poses, self.dog_pose, self.sheep_radius)
 
             # plot every 5th frame
             if self.counter % 5 == 0 and render:
@@ -146,8 +147,9 @@ class ShepherdSimulation:
             self.dog_pose[0], self.dog_pose[1], c='r', s=50, label='Dog')
         vis_sheep = self.vis_sheep_poses
         other_sheep = np.asarray([i for i in self.sheep_poses if i not in vis_sheep])
-        plt.scatter(
-            other_sheep[:, 0], other_sheep[:, 1], c='b', s=50, label='Not visible Sheep')
+        if len(other_sheep) > 0:
+            plt.scatter(
+                other_sheep[:, 0], other_sheep[:, 1], c='b', s=50, label='Not visible Sheep')
         plt.scatter(
             vis_sheep[:, 0], vis_sheep[:, 1], c='g', s=50, label='Visible Sheep')
         plt.title('Shepherding')
@@ -388,6 +390,9 @@ class ShepherdSimulation:
             FS.plot_variable("Decision")
             print(f"Decision: {crisp_decision_value}, {driving}")
 
+        # quick fix for the special case when only one sheep is visible
+        if len(sheep_poses) == 1:
+            driving = True
         # determine the dog position
         if driving:
             # perform driving
