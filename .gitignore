@@ -182,3 +182,6 @@ Icon?
 ehthumbs.db
 Thumbs.db
 Assets/HelperScripts/Debug\.cs\.meta
+
+# ignore generated results
+/results/
