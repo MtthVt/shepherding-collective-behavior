@@ -36,7 +36,7 @@ def _sim_with_agents(N, n, id, total_evaluations_num, start_time):
     # Repeat simulation for 50 times, 8000 time steps each (default parameter)
     avg_success = 0
     for _ in range(no_sims_per_combination):
-        sim = ShepherdSimulation(num_sheep_total=N, num_sheep_neighbors=n, max_steps=no_timesteps, decision_type=DECISION_TYPE)
+        sim = ShepherdSimulation(num_sheep_total=N, num_sheep_neighbors=n, max_steps=no_timesteps, decision_type=DECISION_TYPE, random_state=np.random.RandomState())
         sim.set_thresh_field_params(DECISION_PARAMS)
         _, success, _ = sim.run()
         avg_success += success

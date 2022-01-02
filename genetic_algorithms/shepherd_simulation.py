@@ -23,10 +23,14 @@ class Decision_type:
 
 class ShepherdSimulation:
 
-    def __init__(self, num_sheep_total=30, num_sheep_neighbors=15, decision_type=Decision_type.DEFAULT_STROMBOM, max_steps=1000):
+    def __init__(self, num_sheep_total=30, num_sheep_neighbors=15, decision_type=Decision_type.DEFAULT_STROMBOM, max_steps=1000, random_seed = 0, random_state = None):
 
-        #initialize random state
-        self.random_state = np.random.RandomState(num_sheep_total*num_sheep_neighbors)
+        # initialize random state
+        # take random_state if not None, else set random state according to random seed
+        if random_state is not None:
+            self.random_state = random_state
+        else:
+            self.random_state = np.random.RandomState(num_sheep_total*num_sheep_neighbors + random_seed)
 
         # radius for sheep to be considered as collected by dog
         self.dog_collect_radius = 2.0
