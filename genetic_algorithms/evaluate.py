@@ -3,6 +3,7 @@ import multiprocessing as mp
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from shepherd_simulation import Decision_type
 
 from shepherd_simulation import ShepherdSimulation
 from datetime import datetime
@@ -15,11 +16,12 @@ verbose = True
 evaluated_counter = 0
 total_evaluations_num = 0
 
-timestamp = datetime.now().strftime('%Y.%m.%d.%H.%M')
-result_file = f"results/evaluation_strombom.{timestamp}.npy"
-result_fig_file = f"results/evaluation_strombom.{timestamp}.png"
+DECISION_TYPE = Decision_type.SIGMOID
+DECISION_PARAMS = None
 
-ALPHA, BETA, GAMMA = 0,0,0
+timestamp = datetime.now().strftime('%Y.%m.%d.%H.%M')
+result_file = f"results/evaluation_strombom.{DECISION_TYPE}.{timestamp}.npy"
+result_fig_file = f"results/evaluation_strombom.{DECISION_TYPE}.{timestamp}.png"
 
 
 def _sim_with_agents(N, n, id, total_evaluations_num, start_time):
@@ -34,8 +36,8 @@ def _sim_with_agents(N, n, id, total_evaluations_num, start_time):
     # Repeat simulation for 50 times, 8000 time steps each (default parameter)
     avg_success = 0
     for _ in range(no_sims_per_combination):
-        sim = ShepherdSimulation(N, n, no_timesteps)
-        sim.set_thresh_field_params(ALPHA, BETA, GAMMA)
+        sim = ShepherdSimulation(num_sheep_total=N, num_sheep_neighbors=n, max_steps=no_timesteps, decision_type=DECISION_TYPE)
+        sim.set_thresh_field_params(DECISION_PARAMS)
         _, success, _ = sim.run()
         avg_success += success
     avg_success /= no_sims_per_combination
@@ -68,7 +70,7 @@ def evaluate_paper():
     :return:
     """
 
-    results = np.full((max_no_neighbours + 1, max_no_neighbours + 1), -1.)
+    results = np.full((max_no_neighbours + 1, max_no_neighbours + 1), 0)
 
     with open(result_file, 'wb') as f:
         np.save(f, results)
@@ -90,6 +92,22 @@ def load_best_alpha_beta_gamma(fname):
     y = df_sorted.iloc[-1]['gamma']
     return a,b,y
 
+def load_best_sigmoid_params(fname):
+    df = pd.read_pickle(fname)
+
+    df_sorted = df.sort_values('fitness')
+    N = df_sorted.iloc[-1]['param_N']
+    n = df_sorted.iloc[-1]['param_n']
+    fur = df_sorted.iloc[-1]['param_fur']
+    var = df_sorted.iloc[-1]['param_var']
+    angl = df_sorted.iloc[-1]['param_angle']
+    return N, n, fur, var, angl
+
+def load_best_decision_params(fname):
+    if DECISION_TYPE == Decision_type.SIGMOID:
+        return load_best_sigmoid_params(fname)
+    elif DECISION_TYPE == Decision_type.DEFAULT_STROMBOM:
+        return load_best_alpha_beta_gamma(fname)
 
 def plot_results(results, out_fig_fname=None):
     """
@@ -128,8 +146,8 @@ def plot_results(results, out_fig_fname=None):
         plt.savefig(out_fig_fname)
 
 if __name__ == '__main__':
-    ALPHA, BETA, GAMMA = load_best_alpha_beta_gamma('results/basic_ga.step_4.2021.12.12.19.40.pkl')
-    print(f"Loaded threshold params: {ALPHA}, {BETA}, {GAMMA}")
+    DECISION_PARAMS = load_best_decision_params('results/basic_ga.step_4.sigmoid2021.12.28.10.15.pkl')
+    print(f"Loaded decision params: {DECISION_PARAMS}")
 
     print("Start evaluation")
     results = evaluate_paper()
