@@ -404,7 +404,7 @@ class ShepherdSimulation:
             # perform collecting
             # get intermediate collecting goal; P_c
             int_goal = P_c
-            self.driving_counter.append(self.driving_counter[-1]+1)
+            self.driving_counter.append(self.driving_counter[-1])
 
         # compute increments in x,y components
         direction = int_goal - self.dog_pose
