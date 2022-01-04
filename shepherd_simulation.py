@@ -15,7 +15,7 @@ from fuzzy_dog import get_fuzzy_system
 from helper import plot_driving_collecting_progress, plot_driving_collecting_bar
 
 # Following line is needed to get an updated graphic plot of the env.
-#matplotlib.use("TkAgg")
+matplotlib.use("TkAgg")
 
 # suppress runtime warnings
 warnings.filterwarnings("ignore")
@@ -390,7 +390,7 @@ class ShepherdSimulation:
 
         if verbose:
             # print decision
-			print(f"Firing strengths: {FS.get_firing_strengths()}")
+            print(f"Firing strengths: {FS.get_firing_strengths()}")
             print(f"Decision: {crisp_decision_value}, {driving}")
         if self.counter % 10 == 0 and render:
             self.plot_fuzzy_variables(FS, crisp_decision_value, dist_farthest_sheep_com, distance_dog_P_c)
@@ -495,7 +495,7 @@ class ShepherdSimulation:
 
 def main():
     shepherd_sim = ShepherdSimulation(
-        num_sheep_total=5, num_sheep_neighbors=1)
+        num_sheep_total=30, num_sheep_neighbors=20)
     shepherd_sim.run(render=True, verbose=True)
 
 

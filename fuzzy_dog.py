@@ -29,11 +29,11 @@ def get_fuzzy_system(t, t_min, t_max, d_s, d_d, d_t):
                                                   universe_of_discourse=[0, 5*d_s]))
 
     # distance to collecting point is compared to distance to driving point
-    D_d_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=0.3*d_d, d=6 * d_d), term="near")
-    D_d_2 = FuzzySet(function=Trapezoidal_MF(a=0.5 * d_d, b=1 * d_d, c=2 * d_d, d=5 * d_d), term="far")
+    D_d_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=0.3*d_d, d=0.6 * d_d), term="near")
+    D_d_2 = FuzzySet(function=Trapezoidal_MF(a=0.5 * d_d, b=1 * d_d, c=4 * d_d, d=4 * d_d), term="far")
     FS.add_linguistic_variable("Distance_collecting_point",
                                LinguisticVariable([D_d_1, D_d_2], concept="Distance to next temporary collecting target",
-                                                  universe_of_discourse=[0, 5 * d_s]))
+                                                  universe_of_discourse=[0, 4 * d_s]))
 
     # distance of center of mass to target, if sheep herd is very close to target, it should go into driving mode
     # D_t_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=0.4 * d_t, d=0.8 * d_t), term="near")
@@ -42,7 +42,7 @@ def get_fuzzy_system(t, t_min, t_max, d_s, d_d, d_t):
 
     # Define output fuzzy sets and linguistic variable
     O_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=0.1, d=0.3), term="driving")
-    O_2 = FuzzySet(function=Trapezoidal_MF(a=0.1, b=0.3, c=0.8, d=1), term="collecting")
+    O_2 = FuzzySet(function=Trapezoidal_MF(a=0.1, b=0.3, c=1, d=1), term="collecting")
 
     FS.add_linguistic_variable("Decision", LinguisticVariable([O_1, O_2], universe_of_discourse=[0, 1]))
 
