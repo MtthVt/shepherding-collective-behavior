@@ -15,7 +15,7 @@ from fuzzy_dog import get_fuzzy_system
 from helper import plot_driving_collecting_progress, plot_driving_collecting_bar
 
 # Following line is needed to get an updated graphic plot of the env.
-matplotlib.use("TkAgg")
+#matplotlib.use("TkAgg")
 
 # suppress runtime warnings
 warnings.filterwarnings("ignore")
@@ -114,7 +114,7 @@ class ShepherdSimulation:
 
             # get the new dog position
             # self.dog_heuristic_model()
-            # self.dog_strombom_model()
+            # self.dog_strombom_model(self.vis_sheep_poses)
             self.dog_fuzzy_model(self.vis_sheep_poses, verbose=verbose)
 
             # find new inertia
@@ -254,11 +254,11 @@ class ShepherdSimulation:
         self.inertia[indices, :] = inertia_sheep_near_dog
 
     # function to get new position of dog according to model presented in paper by Strombom et al.
-    def dog_strombom_model(self):
+    def dog_strombom_model(self, sheep_poses):
 
         # check if a sheep is closer than r_a to dog, if yes stop walking
         dist_sheep_dog = np.linalg.norm(
-            self.sheep_poses - self.dog_pose, axis=1)
+            sheep_poses - self.dog_pose, axis=1)
         if np.min(dist_sheep_dog) < 3 * self.sheep_repulsion_dist:
             self.dog_pose = self.dog_pose
             return
@@ -266,7 +266,7 @@ class ShepherdSimulation:
         # check if sheep are within field
         field = self.sheep_repulsion_dist * (self.num_sheep_total ** (2 / 3))
         dist_to_com = np.linalg.norm(
-            (self.sheep_poses - self.sheep_com[None, :]), axis=1)
+            (sheep_poses - self.sheep_com[None, :]), axis=1)
 
         is_within_field = False
         if np.max(dist_to_com) < field:
@@ -293,8 +293,8 @@ class ShepherdSimulation:
 
             # get the farthest sheep
             dist_to_com = np.linalg.norm(
-                (self.sheep_poses - self.sheep_com[None, :]), axis=1)
-            farthest_sheep = self.sheep_poses[np.argmax(dist_to_com), :]
+                (sheep_poses - self.sheep_com[None, :]), axis=1)
+            farthest_sheep = sheep_poses[np.argmax(dist_to_com), :]
 
             # compute the direction
             direction = (farthest_sheep - self.sheep_com)
@@ -383,11 +383,11 @@ class ShepherdSimulation:
             driving = True
 
         if verbose:
-            # plot membership functions
-            FS.plot_variable("Time")
-            FS.plot_variable("Quantity")
-            FS.plot_variable("Distance")
-            FS.plot_variable("Decision")
+            # print decision
+            if self.counter % 10 == 0:
+                FS.plot_variable("Distance_runaway", TGT=distance_dog_P_c)
+                FS.plot_variable("Distance_collecting_point", TGT=dist_final_target)
+            print(f"Firing strengths: {FS.get_firing_strengths()}")
             print(f"Decision: {crisp_decision_value}, {driving}")
 
         # quick fix for the special case when only one sheep is visible
@@ -463,8 +463,8 @@ class ShepherdSimulation:
 
 def main():
     shepherd_sim = ShepherdSimulation(
-        num_sheep_total=30, num_sheep_neighbors=15)
-    shepherd_sim.run(render=True)
+        num_sheep_total=5, num_sheep_neighbors=1)
+    shepherd_sim.run(render=True, verbose=True)
 
 
 if __name__ == '__main__':
