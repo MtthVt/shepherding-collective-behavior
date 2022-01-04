@@ -431,20 +431,21 @@ class ShepherdSimulation:
         :param distance_dog_P_c: distance between the shepherd and the collecting point
         :return:
         """
-
-        # Select the subplots assigned to the linguistic variables (1-3)
-        fig = plt.figure(1)
-        axes = fig.axes[1:]
-        axes = [axes]  # Convert to 2-dimensional for possible future extension to 2D
         # Plot Distance_runaway
-        axes[0][0].clear()
-        FS._lvs["Distance_runaway"].draw(axes[0][0], TGT=dist_farthest_sheep_com)
+        ax = plt.subplot(142)
+        ax.clear()
+        FS._lvs["Distance_runaway"].draw(ax, TGT=dist_farthest_sheep_com)
+
         # Plot Distance collecting point
-        axes[0][1].clear()
-        FS._lvs["Distance_collecting_point"].draw(axes[0][1], TGT=distance_dog_P_c)
+        ax = plt.subplot(143)
+        ax.clear()
+        FS._lvs["Distance_collecting_point"].draw(ax, TGT=distance_dog_P_c)
+
         # Plot Distance collecting point
-        axes[0][2].clear()
-        FS._lvs["Decision"].draw(axes[0][2], TGT=crisp_decision_value)
+        ax = plt.subplot(144)
+        ax.clear()
+        FS._lvs["Decision"].draw(ax, TGT=crisp_decision_value)
+        
         # Draw the resulting plot
         plt.draw()
         plt.pause(0.01)
