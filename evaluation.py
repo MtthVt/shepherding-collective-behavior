@@ -10,8 +10,6 @@ no_timesteps = 8000
 max_no_neighbours = 140
 no_sims_per_combination = 50
 verbose = True
-save_int_results = True
-int_results_folder = "chckpoints"
 
 timestamp = datetime.now().strftime('%Y.%m.%d.%H.%M')
 result_file = f"results/evaluation_strombom.{timestamp}.npy"
