@@ -103,7 +103,11 @@ class ShepherdSimulation:
 
         # initialize matplotlib figure
         if render:
-            plt.figure()
+            # Init plot - 1 figure for the gamefield and 3 for the fuzzy memberships.
+            fuzzy_rows = 1
+            fuzzy_cols = 4
+            plt.subplots(fuzzy_rows, fuzzy_cols, figsize=(fuzzy_cols * 5, fuzzy_rows * 5),
+                         gridspec_kw={'width_ratios': [2, 1, 1, 1], 'wspace': 0.5})
             plt.ion()
             plt.show()
 
@@ -115,7 +119,7 @@ class ShepherdSimulation:
             # get the new dog position
             # self.dog_heuristic_model()
             # self.dog_strombom_model(self.vis_sheep_poses)
-            self.dog_fuzzy_model(self.vis_sheep_poses, verbose=verbose)
+            self.dog_fuzzy_model(self.vis_sheep_poses, verbose=verbose, render=render)
 
             # find new inertia
             self.update_environment()
@@ -140,7 +144,9 @@ class ShepherdSimulation:
         return self.counter, success
 
     def plot_env(self):
-        plt.clf()
+        # The first subplot is the plot for our simulation.
+        ax = plt.subplot(141)       # 1 row, 4 cols and we select the 1. subplot (most left)
+        ax.clear()
         plt.scatter(self.target[0], self.target[1],
                     c='g', s=40, label='Goal')
         plt.scatter(
@@ -319,7 +325,7 @@ class ShepherdSimulation:
         # update position
         self.dog_pose = self.dog_pose + self.dog_speed * direction + self.noise_term * noise
 
-    def dog_fuzzy_model(self, sheep_poses, verbose=False):
+    def dog_fuzzy_model(self, sheep_poses, render=False, verbose=False):
         """
         Dog decides between driving and collecting using Fuzzy Logic
         :return:
@@ -384,11 +390,10 @@ class ShepherdSimulation:
 
         if verbose:
             # print decision
-            if self.counter % 10 == 0:
-                FS.plot_variable("Distance_runaway", TGT=distance_dog_P_c)
-                FS.plot_variable("Distance_collecting_point", TGT=dist_final_target)
-            print(f"Firing strengths: {FS.get_firing_strengths()}")
+			print(f"Firing strengths: {FS.get_firing_strengths()}")
             print(f"Decision: {crisp_decision_value}, {driving}")
+        if self.counter % 10 == 0 and render:
+            self.plot_fuzzy_variables(FS, crisp_decision_value, dist_farthest_sheep_com, distance_dog_P_c)
 
         # quick fix for the special case when only one sheep is visible
         if len(sheep_poses) == 1:
@@ -416,6 +421,33 @@ class ShepherdSimulation:
 
         # update position
         self.dog_pose = self.dog_pose + self.dog_speed * direction + self.noise_term * noise
+
+    def plot_fuzzy_variables(self, FS, crisp_decision_value, dist_farthest_sheep_com, distance_dog_P_c):
+        """
+        Print the different linguistic variables, including the final decision
+        :param FS: Fuzzy system used for inference
+        :param crisp_decision_value: Crisp decision value (range[0,1]) resulting from inference
+        :param dist_farthest_sheep_com: distance between farthest sheep and the sheep com
+        :param distance_dog_P_c: distance between the shepherd and the collecting point
+        :return:
+        """
+
+        # Select the subplots assigned to the linguistic variables (1-3)
+        fig = plt.figure(1)
+        axes = fig.axes[1:]
+        axes = [axes]  # Convert to 2-dimensional for possible future extension to 2D
+        # Plot Distance_runaway
+        axes[0][0].clear()
+        FS._lvs["Distance_runaway"].draw(axes[0][0], TGT=dist_farthest_sheep_com)
+        # Plot Distance collecting point
+        axes[0][1].clear()
+        FS._lvs["Distance_collecting_point"].draw(axes[0][1], TGT=distance_dog_P_c)
+        # Plot Distance collecting point
+        axes[0][2].clear()
+        FS._lvs["Decision"].draw(axes[0][2], TGT=crisp_decision_value)
+        # Draw the resulting plot
+        plt.draw()
+        plt.pause(0.01)
 
     def get_visible_sheep(self, sheep_poses, dog_pose, sheep_radius):
         """
