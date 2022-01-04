@@ -378,7 +378,7 @@ class ShepherdSimulation:
 
         driving = False
         alpha = 0.3
-        crisp_decision_value = FS.Mamdani_inference(['Decision'])['Decision']
+        crisp_decision_value = FS.Mamdani_inference(['Decision'], ignore_warnings=True)['Decision']
         if crisp_decision_value < alpha:
             driving = True
 
