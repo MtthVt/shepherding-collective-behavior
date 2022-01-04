@@ -22,15 +22,15 @@ def get_fuzzy_system(t, t_min, t_max, d_s, d_d, d_t):
     # distance from the farthest sheep to the com (if dog perceives sheep as near/far from herd depends on average
     # distance to com)
 
-    D_s_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=1.5*d_s, d=3 * d_s), term="near")
-    D_s_2 = FuzzySet(function=Trapezoidal_MF(a=2 * d_s, b=3.5*d_s, c=5 * d_s, d=5 * d_s), term="far")
+    D_s_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=1*d_s, d=1.5 * d_s), term="near")
+    D_s_2 = FuzzySet(function=Trapezoidal_MF(a=1 * d_s, b=2.5*d_s, c=5 * d_s, d=5 * d_s), term="far")
     FS.add_linguistic_variable("Distance_runaway",
                                LinguisticVariable([D_s_1, D_s_2], concept="Distance of runaway sheep to com",
                                                   universe_of_discourse=[0, 5*d_s]))
 
     # distance to collecting point is compared to distance to driving point
-    D_d_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=0.6*d_d, d=1.25 * d_d), term="near")
-    D_d_2 = FuzzySet(function=Trapezoidal_MF(a=1 * d_d, b=1.75 * d_d, c=5 * d_d, d=5 * d_d), term="far")
+    D_d_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=0.3*d_d, d=6 * d_d), term="near")
+    D_d_2 = FuzzySet(function=Trapezoidal_MF(a=0.5 * d_d, b=1 * d_d, c=2 * d_d, d=5 * d_d), term="far")
     FS.add_linguistic_variable("Distance_collecting_point",
                                LinguisticVariable([D_d_1, D_d_2], concept="Distance to next temporary collecting target",
                                                   universe_of_discourse=[0, 5 * d_s]))
@@ -47,8 +47,9 @@ def get_fuzzy_system(t, t_min, t_max, d_s, d_d, d_t):
     FS.add_linguistic_variable("Decision", LinguisticVariable([O_1, O_2], universe_of_discourse=[0, 1]))
 
     R1 = "IF (Distance_runaway IS far) AND (Distance_collecting_point IS near) THEN (Decision IS collecting)"
-    R2 = "IF (Distance_runaway IS near) AND (Distance_collecting_point IS far) THEN (Decision IS driving)"
+    R2 = "IF (Distance_runaway IS far) AND (Distance_collecting_point IS far) THEN (Decision IS collecting)"
+    R3 = "IF (Distance_runaway IS near) AND (Distance_collecting_point IS far) THEN (Decision IS driving)"
     #R3 = "IF (Distance_runaway IS ) AND (Distance_collecting_point IS far) AND (Distance_final_target IS near) THEN (Decision IS driving)"
-    FS.add_rules([R1, R2])
+    FS.add_rules([R1, R2, R3])
 
     return FS
