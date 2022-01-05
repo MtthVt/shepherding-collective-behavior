@@ -148,7 +148,7 @@ class ShepherdSimulation:
         ax = plt.subplot(141)       # 1 row, 4 cols and we select the 1. subplot (most left)
         ax.clear()
         plt.scatter(self.target[0], self.target[1],
-                    c='g', s=40, label='Goal')
+                    c='orange', s=40, label='Goal')
         plt.scatter(
             self.dog_pose[0], self.dog_pose[1], c='r', s=50, label='Dog')
         vis_sheep = self.vis_sheep_poses
@@ -445,10 +445,18 @@ class ShepherdSimulation:
         ax = plt.subplot(144)
         ax.clear()
         FS._lvs["Decision"].draw(ax, TGT=crisp_decision_value)
-        
+
         # Draw the resulting plot
         plt.draw()
         plt.pause(0.01)
+        video = False
+        if video:
+            # Save every plot as a figure.
+            plt.savefig("video/file%03d.png" % (self.counter/10))
+            # For video creation: Execute this command in linux:
+            # ffmpeg -framerate 5 -i file%03d.png -pattern_type sequence video.mp4
+            # This will generate a video of all the figures/images. Attention: The ids have to be subsequent!
+            # Check if any subsequent id is missing.
 
     def get_visible_sheep(self, sheep_poses, dog_pose, sheep_radius):
         """

@@ -185,3 +185,4 @@ Assets/HelperScripts/Debug\.cs\.meta
 
 # ignore generated results
 /results/
+/video
