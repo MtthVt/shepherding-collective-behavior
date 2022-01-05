@@ -22,18 +22,18 @@ def get_fuzzy_system(t, t_min, t_max, d_s, d_d, d_t):
     # distance from the farthest sheep to the com (if dog perceives sheep as near/far from herd depends on average
     # distance to com)
 
-    D_s_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=1*d_s, d=3 * d_s), term="near")
-    D_s_2 = FuzzySet(function=Trapezoidal_MF(a=2 * d_s, b=4*d_s, c=6 * d_s, d=6 * d_s), term="far")
+    D_s_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=1*d_s, d=2 * d_s), term="near")
+    D_s_2 = FuzzySet(function=Trapezoidal_MF(a=1.5 * d_s, b=2.5*d_s, c=5 * d_s, d=5 * d_s), term="far")
     FS.add_linguistic_variable("Distance_runaway",
                                LinguisticVariable([D_s_1, D_s_2], concept="Distance of runaway sheep to com",
                                                   universe_of_discourse=[0, 5*d_s]))
 
     # distance to collecting point is compared to distance to driving point
     D_d_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=0.3*d_d, d=0.6 * d_d), term="near")
-    D_d_2 = FuzzySet(function=Trapezoidal_MF(a=0.5 * d_d, b=1 * d_d, c=4 * d_d, d=4 * d_d), term="far")
+    D_d_2 = FuzzySet(function=Trapezoidal_MF(a=0.45 * d_d, b=1 * d_d, c=6 * d_d, d=6 * d_d), term="far")
     FS.add_linguistic_variable("Distance_collecting_point",
                                LinguisticVariable([D_d_1, D_d_2], concept="Distance to next temporary collecting target",
-                                                  universe_of_discourse=[0, 4 * d_s]))
+                                                  universe_of_discourse=[0, 6 * d_s]))
 
     # distance of center of mass to target, if sheep herd is very close to target, it should go into driving mode
     # D_t_1 = FuzzySet(function=Trapezoidal_MF(a=0, b=0, c=0.4 * d_t, d=0.8 * d_t), term="near")
