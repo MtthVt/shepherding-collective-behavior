@@ -23,6 +23,7 @@ warnings.filterwarnings("ignore")
 
 # class implementation of shepherding
 
+genVideo = False
 
 class ShepherdSimulation:
 
@@ -86,6 +87,7 @@ class ShepherdSimulation:
         # number of executed steps
         self.counter = 0
         self.driving_counter = [0]
+        self.video_counter = 0
 
     def success_criteria(self):
         """
@@ -109,7 +111,8 @@ class ShepherdSimulation:
             plt.subplots(fuzzy_rows, fuzzy_cols, figsize=(fuzzy_cols * 5, fuzzy_rows * 5),
                          gridspec_kw={'width_ratios': [2, 1, 1, 1], 'wspace': 0.5})
             plt.ion()
-            plt.show()
+            if not genVideo:
+                plt.show()
 
         # main loop for simulation
         while not self.success_criteria() and self.counter < self.max_steps:
@@ -126,8 +129,8 @@ class ShepherdSimulation:
             # Update the list of visible sheep
             self.vis_sheep_poses = self.get_visible_sheep(self.sheep_poses, self.dog_pose, self.sheep_radius)
 
-            # plot every 5th frame
-            if self.counter % 5 == 0 and render:
+            # plot every 5th frame, export every frame if making a video
+            if (render and self.counter % 5 == 0) or genVideo:
                 self.plot_env()
 
         success = False
@@ -158,13 +161,13 @@ class ShepherdSimulation:
                 other_sheep[:, 0], other_sheep[:, 1], c='b', s=50, label='Not visible Sheep')
         plt.scatter(
             vis_sheep[:, 0], vis_sheep[:, 1], c='g', s=50, label='Visible Sheep')
-        plt.title('Shepherding')
+        plt.title('Shepherding (N=' + str(self.num_sheep_total) + ', n=' + str(self.num_sheep_neighbors) + ')')
         border = 20
         plt.xlim([0 - border, self.field_length + border])
         plt.ylim([0 - border, self.field_length + border])
         plt.legend()
-        plt.draw()
-        plt.pause(0.01)
+        if not genVideo:
+            plt.pause(0.01)
 
     # function to find new inertia for sheep
     def update_environment(self):
@@ -392,7 +395,7 @@ class ShepherdSimulation:
             # print decision
             print(f"Firing strengths: {FS.get_firing_strengths()}")
             print(f"Decision: {crisp_decision_value}, {driving}")
-        if self.counter % 10 == 0 and render:
+        if (render and self.counter % 10 == 0) or genVideo:
             self.plot_fuzzy_variables(FS, crisp_decision_value, dist_farthest_sheep_com, distance_dog_P_c)
 
         # quick fix for the special case when only one sheep is visible
@@ -447,12 +450,12 @@ class ShepherdSimulation:
         FS._lvs["Decision"].draw(ax, TGT=crisp_decision_value)
 
         # Draw the resulting plot
-        plt.draw()
-        plt.pause(0.01)
-        video = False
-        if video:
+        if not genVideo:
+            plt.pause(0.01)
+        else:
             # Save every plot as a figure.
-            plt.savefig("video/file%03d.png" % (self.counter/10))
+            plt.savefig("video/file%04d.png" % self.video_counter)
+            self.video_counter += 1
             # For video creation: Execute this command in linux:
             # ffmpeg -framerate 5 -i file%03d.png -pattern_type sequence video.mp4
             # This will generate a video of all the figures/images. Attention: The ids have to be subsequent!
