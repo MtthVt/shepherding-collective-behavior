@@ -1,3 +1,9 @@
+# custom
+genetic_algorithms/results/*.pkl
+genetic_algorithms/scratch.ipynb
+genetic_algorithms/scratch.py
+
+
 # ============ #
 # Python       #
 # ============ #
