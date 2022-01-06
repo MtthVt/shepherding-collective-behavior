@@ -119,7 +119,7 @@ def load_best_decision_params(fname):
     elif DECISION_TYPE == Decision_type.DEFAULT_STROMBOM:
         return load_best_alpha_beta_gamma(fname)
 
-def plot_results(results, out_fig_fname=None):
+def plot_results(results, plot_traingle_lines=True, out_fig_fname=None):
     """
     Function to generate an annotated heatmap using the results array
     :param results:
@@ -131,6 +131,13 @@ def plot_results(results, out_fig_fname=None):
 
     # Plot the heatmap itself
     im = ax.imshow(results, cmap='Blues_r', interpolation='nearest', origin='lower')
+
+    if plot_traingle_lines:
+        x = np.linspace(1, results.shape[0] - 1, 200)
+        y_up = 0.53*x
+        y_down = 3 * np.log2(x)
+        plt.plot(x, y_up, 'black', linewidth=0.5)
+        plt.plot(x, y_down, 'black', linewidth=0.5)
 
     # Create colorbar
     cbar = ax.figure.colorbar(im, ax=ax)
