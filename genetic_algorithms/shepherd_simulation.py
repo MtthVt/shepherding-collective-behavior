@@ -23,10 +23,14 @@ class Decision_type:
 
 class ShepherdSimulation:
 
-    def __init__(self, num_sheep_total=30, num_sheep_neighbors=15, decision_type=Decision_type.DEFAULT_STROMBOM):
+    def __init__(self, num_sheep_total=30, num_sheep_neighbors=15, decision_type=Decision_type.DEFAULT_STROMBOM, max_steps=1000, random_seed = 0, random_state = None):
 
-        #initialize random state
-        self.random_state = np.random.RandomState(num_sheep_total*num_sheep_neighbors)
+        # initialize random state
+        # take random_state if not None, else set random state according to random seed
+        if random_state is not None:
+            self.random_state = random_state
+        else:
+            self.random_state = np.random.RandomState(num_sheep_total*num_sheep_neighbors + random_seed)
 
         # radius for sheep to be considered as collected by dog
         self.dog_collect_radius = 2.0
@@ -78,7 +82,7 @@ class ShepherdSimulation:
         self.inertia = np.ones((self.num_sheep_total, 2))
 
         # initialize maximum number of steps
-        self.max_steps = 1000
+        self.max_steps = max_steps
 
         self.decision_type = decision_type
         # field threshold params (for driving/collecting decision) for default strombom decision
@@ -93,7 +97,12 @@ class ShepherdSimulation:
         self.thresh_variance = 0
         self.thresh_angle = 0
 
-
+    def success_criteria(self):
+        """
+        Function to determine the success of the simulation (to be modified)
+        :return: Success or not
+        """
+        return np.linalg.norm(self.target - self.sheep_com) < 1.0
 
     # main function to perform simulation
     def run(self, render=False, verbose=False):
@@ -112,7 +121,7 @@ class ShepherdSimulation:
             plt.show()
 
         # main loop for simulation
-        while np.linalg.norm(self.target - self.sheep_com) > 1.0 and counter < self.max_steps:
+        while not self.success_criteria() and counter < self.max_steps:
             # update counter variable
             counter += 1
 
@@ -142,10 +151,14 @@ class ShepherdSimulation:
                 plt.draw()
                 plt.pause(0.01)
 
+        success = False
+        if self.success_criteria():
+            success = True
+
         # complete execution
         if verbose:
             print('Finish simulation')
-        return counter, self.sheep_poses
+        return counter, success, self.sheep_poses
 
     # function to find new inertia for sheep
     def update_environment(self):
