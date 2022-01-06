@@ -71,17 +71,11 @@ class ShepherdSimulation:
         # initialize maximum number of steps
         self.max_steps = 1500
 
-        # field threshold params (for driving/collecting decision)
-        self.thresh_alpha = 1
-        self.thresh_beta = 2 / 3
-        self.thresh_gamma = 0
-
     # main function to perform simulation
-    def run(self, render=False, verbose=False):
+    def run(self, render=False):
 
         # start the simulation
-        if verbose:
-            print('Start simulation')
+        print('Start simulation')
 
         # initialize counter for plotting
         counter = 0
@@ -124,9 +118,7 @@ class ShepherdSimulation:
                 plt.pause(0.01)
 
         # complete execution
-        if verbose:
-            print('Finish simulation')
-        return counter, self.sheep_poses
+        print('Finish simulation')
 
     # function to find new inertia for sheep
     def update_environment(self):
@@ -234,8 +226,7 @@ class ShepherdSimulation:
             return
 
         # check if sheep are within field
-        field = self.thresh_alpha * self.sheep_repulsion_dist * \
-            (self.num_sheep_total ** self.thresh_beta) + self.thresh_gamma
+        field = self.sheep_repulsion_dist * (self.num_sheep_total ** (2 / 3))
         dist_to_com = np.linalg.norm(
             (self.sheep_poses - self.sheep_com[None, :]), axis=1)
 
@@ -280,27 +271,18 @@ class ShepherdSimulation:
         direction /= np.linalg.norm(direction)
 
         # error term
-        inds_sheep_near_dog = dist_sheep_dog < self.dog_repulsion_dist
-        inertia_sheep_near_dog = self.inertia[inds_sheep_near_dog, :]
-        num_near_sheep = len(inertia_sheep_near_dog)
-        noise = np.random.randn(num_near_sheep, 2)
-        noise /= np.linalg.norm(noise, axis=1, keepdims=True)
+        noise = np.random.randn(2)
+        noise /= np.linalg.norm(noise, keepdims=True)
 
         # update position
-        # ToDo: add noise
-        self.dog_pose = self.dog_pose + self.dog_speed * direction
+        self.dog_pose = self.dog_pose + self.dog_speed * direction + self.noise_term*noise
 
-    # set parameters related to field threshold calculation (used for genetic algorithm)
-    def set_thresh_field_params(self, alpha, beta, gamma):
-        self.thresh_alpha = alpha
-        self.thresh_beta = beta
-        self.thresh_gamma = gamma
 
 
 def main():
     shepherd_sim = ShepherdSimulation(
         num_sheep_total=30, num_sheep_neighbors=15)
-    shepherd_sim.run(render=True, verbose=False)
+    shepherd_sim.run(render=True)
 
 
 if __name__ == '__main__':
