@@ -4,7 +4,7 @@
 """Main file implementing full simulation of shepherding with environment and its dog and sheep agents
    Based on: https://github.com/buntyke/shepherd_gym
 """
-
+import argparse
 import warnings
 
 import matplotlib
@@ -15,17 +15,15 @@ from fuzzy_dog import get_fuzzy_system
 from helper import plot_driving_collecting_progress, plot_driving_collecting_bar
 
 # Following line is needed to get an updated graphic plot of the env.
+# Important: Comment this line out if run on server without frontend!
 matplotlib.use("TkAgg")
 
 # suppress runtime warnings
 warnings.filterwarnings("ignore")
 
 
-# class implementation of shepherding
-
-genVideo = False
-
 class ShepherdSimulation:
+    genVideo = False
 
     def __init__(self, num_sheep_total=30, num_sheep_neighbors=15, max_steps=1500):
 
@@ -96,9 +94,13 @@ class ShepherdSimulation:
         """
         return np.linalg.norm(self.target - self.sheep_com) < 5.0
 
-    # main function to perform simulation
     def run(self, render=False, verbose=False):
-
+        """
+        main function to perform the simulation loop
+        :param render: argument specifying if the environment shall be plotted
+        :param verbose: Output verbose information during the run
+        :return: counter, success: specifying if simulation successful and how long it took.
+        """
         # start the simulation
         if verbose:
             print('Start simulation')
@@ -111,7 +113,7 @@ class ShepherdSimulation:
             plt.subplots(fuzzy_rows, fuzzy_cols, figsize=(fuzzy_cols * 5, fuzzy_rows * 5),
                          gridspec_kw={'width_ratios': [2, 1, 1, 1], 'wspace': 0.5})
             plt.ion()
-            if not genVideo:
+            if not ShepherdSimulation.genVideo:
                 plt.show()
 
         # main loop for simulation
@@ -130,7 +132,7 @@ class ShepherdSimulation:
             self.vis_sheep_poses = self.get_visible_sheep(self.sheep_poses, self.dog_pose, self.sheep_radius)
 
             # plot every 5th frame, export every frame if making a video
-            if (render and self.counter % 5 == 0) or genVideo:
+            if (render and self.counter % 5 == 0) or ShepherdSimulation.genVideo:
                 self.plot_env()
 
         success = False
@@ -148,7 +150,7 @@ class ShepherdSimulation:
 
     def plot_env(self):
         # The first subplot is the plot for our simulation.
-        ax = plt.subplot(141)       # 1 row, 4 cols and we select the 1. subplot (most left)
+        ax = plt.subplot(141)  # 1 row, 4 cols and we select the 1. subplot (most left)
         ax.clear()
         plt.scatter(self.target[0], self.target[1],
                     c='orange', s=40, label='Goal')
@@ -166,7 +168,7 @@ class ShepherdSimulation:
         plt.xlim([0 - border, self.field_length + border])
         plt.ylim([0 - border, self.field_length + border])
         plt.legend()
-        if not genVideo:
+        if not ShepherdSimulation.genVideo:
             plt.pause(0.01)
 
     # function to find new inertia for sheep
@@ -192,7 +194,7 @@ class ShepherdSimulation:
         # compute random movements while grazing (with prob self.grazing_prob)
         inertia_sheep_far_dog = np.zeros(inertia_sheep_far_dog.shape)
         moving_sheep = np.random.choice([True, False], num_far_sheep, p=[
-                                        self.grazing_prob, 1 - self.grazing_prob])
+            self.grazing_prob, 1 - self.grazing_prob])
         inertia_sheep_far_dog[moving_sheep, :] = np.random.randn(
             inertia_sheep_far_dog[moving_sheep, :].shape[0], 2)
         inertia_sheep_far_dog[moving_sheep, :] = np.linalg.norm(inertia_sheep_far_dog[moving_sheep, :], axis=1,
@@ -289,8 +291,7 @@ class ShepherdSimulation:
             direction = self.sheep_com - self.target
             direction /= np.linalg.norm(direction)
 
-            factor = self.sheep_repulsion_dist * \
-                     (np.sqrt(self.num_sheep_total))
+            factor = self.sheep_repulsion_dist * (np.sqrt(self.num_sheep_total))
 
             # get intermediate collecting goal; P_d
             int_goal = self.sheep_com + (direction * factor)
@@ -347,8 +348,7 @@ class ShepherdSimulation:
         direction = sheep_com - self.target
         direction /= np.linalg.norm(direction)
 
-        factor = self.sheep_repulsion_dist * \
-                 (np.sqrt(self.num_sheep_total))
+        factor = self.sheep_repulsion_dist * (np.sqrt(self.num_sheep_total))
 
         P_d = sheep_com + (direction * factor)
         distance_P_d = np.linalg.norm(P_d - self.dog_pose)
@@ -356,14 +356,15 @@ class ShepherdSimulation:
         # calculate distance of initial sheep position to target
         initial_distance_target = np.linalg.norm(self.target - self.init_sheep_pose)
 
-        t_min = np.linalg.norm(self.target - self.dog_pose)/self.dog_speed
+        t_min = np.linalg.norm(self.target - self.dog_pose) / self.dog_speed
 
         # average distance of sheep to com
         dist_to_com = np.linalg.norm(
             (sheep_poses - sheep_com[None, :]), axis=1)
         avg_dist_to_com = np.mean(dist_to_com)
 
-        FS = get_fuzzy_system(self.counter, t_min, self.max_steps, avg_dist_to_com, distance_P_d, initial_distance_target)
+        FS = get_fuzzy_system(self.counter, t_min, self.max_steps, avg_dist_to_com, distance_P_d,
+                              initial_distance_target)
 
         # Distance of farthest sheep to center of mass
         farthest_sheep = sheep_poses[np.argmax(dist_to_com), :]
@@ -395,7 +396,7 @@ class ShepherdSimulation:
             # print decision
             print(f"Firing strengths: {FS.get_firing_strengths()}")
             print(f"Decision: {crisp_decision_value}, {driving}")
-        if (render and self.counter % 10 == 0) or genVideo:
+        if (render and self.counter % 10 == 0) or ShepherdSimulation.genVideo:
             self.plot_fuzzy_variables(FS, crisp_decision_value, dist_farthest_sheep_com, distance_dog_P_c)
 
         # quick fix for the special case when only one sheep is visible
@@ -406,7 +407,7 @@ class ShepherdSimulation:
             # perform driving
             # get intermediate collecting goal; P_d
             int_goal = P_d
-            self.driving_counter.append(self.driving_counter[-1]+1)
+            self.driving_counter.append(self.driving_counter[-1] + 1)
 
         else:
             # perform collecting
@@ -450,7 +451,7 @@ class ShepherdSimulation:
         FS._lvs["Decision"].draw(ax, TGT=crisp_decision_value)
 
         # Draw the resulting plot
-        if not genVideo:
+        if not ShepherdSimulation.genVideo:
             plt.pause(0.01)
         else:
             # Save every plot as a figure.
@@ -461,7 +462,8 @@ class ShepherdSimulation:
             # This will generate a video of all the figures/images. Attention: The ids have to be subsequent!
             # Check if any subsequent id is missing.
 
-    def get_visible_sheep(self, sheep_poses, dog_pose, sheep_radius):
+    @staticmethod
+    def get_visible_sheep(sheep_poses, dog_pose, sheep_radius):
         """
         Calculates the sheeps the dog can actually see
         :return:
@@ -505,10 +507,30 @@ class ShepherdSimulation:
         return np.asarray(visible_sheep_positions)
 
 
+def get_args():
+    parser = argparse.ArgumentParser(description='Run the Strömbom simulation with fuzzy logic')
+    parser.add_argument('num_sheep', metavar='N', nargs='?', type=int, default=30, help='Total number of sheep')
+    parser.add_argument('num_neighbors', metavar='n', nargs='?', type=int, default=20,
+                        help='Number of neighbors sheep take into account')
+    parser.add_argument('max_steps', type=int, nargs='?', default=8000,
+                        help='Max number of steps to run the simulation')
+    parser.add_argument('-v', '--verbose', action='store_true',
+                        help='Print verbose informations')
+    parser.add_argument('-nr', '--no-render', action='store_true',
+                        help='Toggle if the simulation shall be run with visualization')
+    parser.add_argument('-vi', '--video', action='store_true',
+                        help='Toggle to enable exporting of every frame into a folder "/video",'
+                             ' to create a video with ffmpeg afterwards.')
+
+    return parser.parse_args()
+
+
 def main():
+    args = get_args()
+    ShepherdSimulation.genVideo = args.video
     shepherd_sim = ShepherdSimulation(
-        num_sheep_total=30, num_sheep_neighbors=20)
-    shepherd_sim.run(render=True, verbose=True)
+        num_sheep_total=args.num_sheep, num_sheep_neighbors=args.num_neighbors, max_steps=args.max_steps)
+    shepherd_sim.run(render=not args.no_render, verbose=args.verbose)
 
 
 if __name__ == '__main__':
